@@ -5,12 +5,12 @@ export default function Stats() {
   const stats = [
     { label: 'Participants', value: '100+', icon: Users },
     { label: 'Hours', value: '48', icon: Code },
-    { label: 'Prizes', value: 'RS 80K', icon: Trophy },
+    { label: 'Prizes', value: 'NRs 95K', icon: Trophy },
     { label: 'Location', value: 'KTM', icon: MapPin },
   ];
 
   return (
-    <section className="py-24 px-8 max-w-7xl mx-auto">
+    <section className="py-15 px-8 max-w-7xl mx-auto">
       <div className="grid grid-cols-2 lg:grid-cols-4 gap-6">
         {stats.map((stat, index) => (
           <motion.div

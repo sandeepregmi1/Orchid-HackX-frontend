@@ -141,7 +141,7 @@ function MemberCard({ member }: { member: Member }) {
 
 export default function Team() {
   return (
-    <section id="team" className="relative py-40 px-6 overflow-hidden bg-background">
+    <section id="team" className="relative py-15 px-6 overflow-hidden bg-background">
       {/* Background Atmosphere */}
       <div className="absolute top-0 left-0 w-full h-full pointer-events-none">
         <div className="absolute top-[20%] right-[10%] w-[30%] h-[30%] bg-primary/5 blur-[120px] rounded-full animate-pulse" />

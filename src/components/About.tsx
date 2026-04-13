@@ -1,5 +1,6 @@
 import { motion } from 'motion/react';
-import { Users, Lightbulb, GraduationCap, Zap, Sparkles } from 'lucide-react';
+import { Users, Lightbulb, GraduationCap, Zap, Sparkles, Calendar } from 'lucide-react';
+
 
 interface Feature {
     title: string;
@@ -44,7 +45,7 @@ export default function About() {
     return (
         <section
             id="about"
-            className="relative py-40 px-6 overflow-hidden bg-background"
+            className="relative py-15 px-8 overflow-hidden bg-background"
         >
             {/* Background Atmosphere */}
             <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full max-w-6xl aspect-square pointer-events-none opacity-20">
@@ -89,7 +90,7 @@ export default function About() {
                 </div>
 
                 {/* Staggered Feature Cards Grid */}
-                <motion.div 
+                <motion.div
                     initial="hidden"
                     whileInView="show"
                     viewport={{ once: true, amount: 0.1 }}
@@ -110,8 +111,8 @@ export default function About() {
                             key={feature.title}
                             variants={{
                                 hidden: { opacity: 0, y: 30 },
-                                show: { 
-                                    opacity: 1, 
+                                show: {
+                                    opacity: 1,
                                     y: 0,
                                     transition: {
                                         duration: 0.6,
@@ -122,16 +123,14 @@ export default function About() {
                             className="group relative glass-card p-8 rounded-[2rem] hover:bg-surface-container-high transition-all duration-500 hover:-translate-y-2 border border-white/5"
                         >
                             {/* Card Accent Glow */}
-                            <div className={`absolute -inset-px rounded-[2rem] bg-linear-to-b ${
-                                feature.color === 'primary' ? 'from-primary/20' : 
+                            <div className={`absolute -inset-px rounded-[2rem] bg-linear-to-b ${feature.color === 'primary' ? 'from-primary/20' :
                                 feature.color === 'secondary' ? 'from-secondary/20' : 'from-tertiary/20'
-                            } to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none`} />
+                                } to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none`} />
 
-                            <div className={`w-14 h-14 rounded-2xl mb-8 flex items-center justify-center transition-all duration-500 ${
-                                feature.color === 'primary' ? 'bg-primary/10 text-primary group-hover:bg-primary group-hover:text-on-primary' : 
-                                feature.color === 'secondary' ? 'bg-secondary/10 text-secondary group-hover:bg-secondary group-hover:text-on-secondary' : 
-                                'bg-tertiary/10 text-tertiary group-hover:bg-tertiary group-hover:text-on-tertiary'
-                            } shadow-lg shadow-black/20`}>
+                            <div className={`w-14 h-14 rounded-2xl mb-8 flex items-center justify-center transition-all duration-500 ${feature.color === 'primary' ? 'bg-primary/10 text-primary group-hover:bg-primary group-hover:text-on-primary' :
+                                feature.color === 'secondary' ? 'bg-secondary/10 text-secondary group-hover:bg-secondary group-hover:text-on-secondary' :
+                                    'bg-tertiary/10 text-tertiary group-hover:bg-tertiary group-hover:text-on-tertiary'
+                                } shadow-lg shadow-black/20`}>
                                 <feature.icon size={28} />
                             </div>
 
@@ -143,10 +142,9 @@ export default function About() {
                             </p>
 
                             {/* Decorative bottom line */}
-                            <div className={`absolute bottom-8 left-8 right-8 h-px bg-linear-to-r from-transparent ${
-                                feature.color === 'primary' ? 'via-primary/30' : 
+                            <div className={`absolute bottom-8 left-8 right-8 h-px bg-linear-to-r from-transparent ${feature.color === 'primary' ? 'via-primary/30' :
                                 feature.color === 'secondary' ? 'via-secondary/30' : 'via-tertiary/30'
-                            } to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500`} />
+                                } to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500`} />
                         </motion.div>
                     ))}
                 </motion.div>
@@ -159,9 +157,35 @@ export default function About() {
                     transition={{ duration: 0.8, delay: 1 }}
                     className="mt-24 text-center"
                 >
-                    <p className="text-on-surface-variant font-label text-sm uppercase tracking-[0.2em] font-medium">
-                        Join the Circuit • 19th – 21st June 2026
+                    {/* <p className="text-white font-label text-xl uppercase tracking-[0.2em] font-medium">
+                        Join the Circuit
+                        <br />
+                        <br />
+
+                        19th – 21st June 2026
+                    </p> */}
+
+
+
+
+                    <p className="text-white font-label text-xl uppercase tracking-[0.2em] font-medium space-y-2">
+                        <span className="flex items-center gap-2 justify-center">
+                            <Zap size={18} />
+                            Join the Circuit
+                            <Zap size={18} />
+                        </span>
+
+                        <span className="flex items-center gap-2 justify-center text-white text-xl/10 tracking-[0.15em]">
+                            <Calendar size={18} />
+                            19th – 21st June 2026
+                        </span>
                     </p>
+
+
+
+
+
+
                 </motion.div>
             </div>
         </section>

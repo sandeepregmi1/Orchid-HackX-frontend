@@ -26,7 +26,7 @@ function TrackCard({ track, index }: TrackCardProps) {
       {/* Base Card */}
       <div className="glass-card p-10 rounded-[2.5rem] overflow-hidden hover:shadow-[0_0_50px_rgba(199,125,255,0.15)] transition-all duration-500 h-full">
         <div className={`absolute top-0 left-0 w-full h-1 bg-gradient-to-r ${track.color}`} />
-        
+
         <div className="w-16 h-16 rounded-2xl bg-surface-container-highest flex items-center justify-center text-primary mb-8 group-hover:rotate-12 transition-transform duration-500">
           <track.icon size={32} />
         </div>
@@ -100,7 +100,7 @@ export default function Tracks() {
   ];
 
   return (
-    <section id="tracks" className="py-32 px-8 max-w-7xl mx-auto">
+    <section id="tracks" className="py-15 px-8 max-w-7xl mx-auto">
       <div className="text-center mb-20">
         <h2 className="text-5xl md:text-7xl font-syne font-bold mb-6">
           Hackathon <span className="text-primary">Tracks</span>

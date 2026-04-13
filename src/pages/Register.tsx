@@ -2,7 +2,7 @@
 import { motion } from 'motion/react';
 import { ArrowLeft, CheckCircle2 } from 'lucide-react';
 import { useState, FormEvent } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, Link } from 'react-router-dom';
 import Footer from '../components/Footer';
 
 interface LabelProps {
@@ -483,9 +483,10 @@ export default function Register() {
                     />
                     <label htmlFor="coc" className="text-sm text-on-surface-variant cursor-pointer select-none">
                       I have read and agree to the{' '}
-                      <a href="/code-of-conduct" className="text-primary underline hover:text-primary-container transition-colors">
+                      <Link
+                        to="/code-of-conduct" className="text-primary underline hover:text-primary-container transition-colors">
                         Code of Conduct
-                      </a>
+                      </Link>
                     </label>
                   </div>
 

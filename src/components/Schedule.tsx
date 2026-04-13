@@ -68,7 +68,7 @@ export default function Schedule() {
   ];
 
   return (
-    <section id="schedule" className="py-32 px-8 max-w-7xl mx-auto">
+    <section id="schedule" className="py-15 px-8 max-w-7xl mx-auto">
       <div className="text-center mb-20">
         <h2 className="text-5xl md:text-7xl font-syne font-bold mb-6">
           Event <span className="text-secondary">Schedule</span>

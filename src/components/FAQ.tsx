@@ -56,7 +56,7 @@ export default function FAQ() {
   const [openIdx, setOpenIdx] = useState<number | null>(0);
 
   return (
-    <section id="faq" className="py-32 px-8 max-w-3xl mx-auto">
+    <section id="faq" className="py-15 px-8 max-w-3xl mx-auto">
       <div className="text-center mb-20">
         <h2 className="text-5xl md:text-7xl font-syne font-bold mb-6">
           FAQ

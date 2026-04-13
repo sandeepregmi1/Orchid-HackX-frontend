@@ -46,7 +46,7 @@ export default function Hero() {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 1, delay: 0.6 }}
-        className="max-w-2xl text-on-surface-variant text-lg mb-6 md:text-xl font-dm relative z-10"
+        className="max-w-2xl text-white text-lg mb-6 md:text-xl font-dm relative z-10 "
       >
         From ideas to innovation
       </motion.p>
@@ -72,7 +72,7 @@ export default function Hero() {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 1, delay: 1 }}
-        className="max-w-2xl text-on-surface-variant text-lg mb-6 md:text-xl font-dm relative z-10"
+        className="max-w-2xl text-white text-lg mb-6 md:text-xl font-dm relative z-10"
       >
         19th – 21st June 2026 • 48 Hours of Pure Creation
       </motion.p>
