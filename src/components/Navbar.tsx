@@ -57,7 +57,7 @@ export default function Navbar({ onRegisterClick, onHomeClick }: NavbarProps) {
         </div>
 
         {/* Desktop Nav */}
-        <div className="hidden md:flex items-center gap-6 font-syne font-semibold tracking-tight text-sm">
+        <div className="hidden md:flex items-center gap-6 font-syne font-semibold tracking-tight text-base">
           {navLinks.map((link) => (
             <div key={link.name}>
               {link.href ? (

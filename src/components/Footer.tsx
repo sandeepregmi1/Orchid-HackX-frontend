@@ -50,7 +50,7 @@ export default function Footer() {
             src={logo}
             referrerPolicy="no-referrer"
           />
-          <p className="font-dm text-sm text-on-surface/90 leading-relaxed">
+          <p className="font-dm text-base text-on-surface/90 leading-relaxed">
             © 2026 OrchidHackX. <br />
             From ideas to innovation.
           </p>
@@ -58,7 +58,7 @@ export default function Footer() {
 
         {sections.map((section) => (
           <div key={section.title} className="flex flex-col gap-3">
-            <span className="font-syne font-semibold text-primary uppercase text-xs tracking-widest mb-2">
+            <span className="font-syne font-semibold text-primary uppercase text-base tracking-widest mb-2">
               {section.title}
             </span>
 
@@ -67,7 +67,7 @@ export default function Footer() {
                 <Link
                   key={link.name}
                   to={link.href}
-                  className="text-on-surface/90 hover:text-primary transition-colors text-sm font-medium"
+                  className="text-on-surface/90 hover:text-primary transition-colors text-base font-medium"
                 >
                   {link.name}
                 </Link>
@@ -75,7 +75,7 @@ export default function Footer() {
                 <a
                   key={link.name}
                   href={link.href}
-                  className="text-on-surface/90 hover:text-primary transition-colors text-sm font-medium"
+                  className="text-on-surface/90 hover:text-primary transition-colors text-base font-medium"
                 >
                   {link.name}
                 </a>

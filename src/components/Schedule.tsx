@@ -69,21 +69,32 @@ export default function Schedule() {
 
   return (
     <section id="schedule" className="py-15 px-8 max-w-7xl mx-auto">
+
+      {/* Header */}
       <div className="text-center mb-20">
-        <h2 className="text-5xl md:text-7xl font-syne font-bold mb-6">
+        <h2 className="text-5xl md:text-7xl font-syne font-bold mb-4">
           Event <span className="text-secondary">Schedule</span>
         </h2>
       </div>
 
-      <div className="grid lg:grid-cols-3 gap-10">
+      {/* Grid */}
+      <div className="grid lg:grid-cols-3 gap-12">
+
         {days.map((day) => (
-          <div key={day.day} className="space-y-8">
-            <h3 className="text-xl font-syne font-semibold text-primary flex items-center gap-4">
+          <div key={day.day} className="relative">
+
+            {/* Day Title */}
+            <h3 className="text-xl font-syne font-semibold text-primary mb-8 flex items-center gap-3">
+              <span className="w-3 h-3 rounded-full bg-primary/70" />
               {day.day}
-              <div className="h-px flex-1 bg-primary/20" />
             </h3>
 
+            {/* Vertical Line */}
+            <div className="absolute left-[6px] top-10 bottom-0 w-px bg-primary/10" />
+
+            {/* Events */}
             <div className="space-y-6">
+
               {day.events.map((event, idx) => (
                 <motion.div
                   key={idx}
@@ -91,17 +102,29 @@ export default function Schedule() {
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ delay: idx * 0.1 }}
                   viewport={{ once: true }}
-                  className="glass-card p-6 rounded-2xl hover:bg-surface-container-high transition-colors"
+                  className="relative pl-6"
                 >
-                  <h4 className="font-syne font-semibold text-on-surface mb-1">
-                    {event.title}
-                  </h4>
-                  <p className="text-sm text-on-surface-variant leading-relaxed">
-                    {event.desc}
-                  </p>
+
+                  {/* Dot */}
+                  <span className="absolute left-0 top-4 w-2 h-2 rounded-full bg-primary/40" />
+
+                  {/* Card */}
+                  <div className="glass-card p-6 rounded-2xl transition-all duration-300 hover:translate-y-[-2px] hover:bg-surface-container-high">
+
+                    <h4 className="font-syne font-semibold text-on-surface mb-1">
+                      {event.title}
+                    </h4>
+
+                    <p className="text-sm text-on-surface-variant leading-relaxed">
+                      {event.desc}
+                    </p>
+
+                  </div>
                 </motion.div>
               ))}
+
             </div>
+
           </div>
         ))}
       </div>
