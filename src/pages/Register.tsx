@@ -66,6 +66,11 @@ export default function Register() {
     experience: '',
   });
 
+
+  const validatePhoneNumber = (phone: string) => /^9\d{9}$/.test(phone);
+const [phoneError, setPhoneError] = useState('');
+
+
   const [teamSize, setTeamSize] = useState('3');
   const [selectedTrack, setSelectedTrack] = useState('AI / ML');
   const [cocAccepted, setCocAccepted] = useState(false);
@@ -79,15 +84,36 @@ export default function Register() {
   const tracks = ['AI / ML', 'Open Innovation', 'CyberSecurity'];
   const teamSizes = ['3', '4'];
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
-    const { name, value } = e.target;
-    setFormData(prev => ({ ...prev, [name]: value }));
-  };
+const handleChange = (
+  e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>
+) => {
+  const { name, value } = e.target;
+
+  setFormData(prev => ({ ...prev, [name]: value }));
+
+  if (name === 'phoneNumber') {
+    if (value.length === 0) {
+      setPhoneError('');
+    } else if (!/^9\d{0,9}$/.test(value)) {
+      setPhoneError('Phone must start with 9 and contain only digits');
+    } else if (value.length === 10 && !validatePhoneNumber(value)) {
+      setPhoneError('Phone number must be 10 digits starting with 9');
+    } else {
+      setPhoneError('');
+    }
+  }
+};
 
   const handleSubmit = async (e: FormEvent) => {
     e.preventDefault();
     setLoading(true);
     setIsError(false);
+
+    if (!/^9\d{9}$/.test(formData.phoneNumber)) {
+  setIsError(true);
+  setErrorMessage('Phone number must be 10 digits starting with 9');
+  return;
+}
 
     // Prepare JSON payload for Backend
     const payload = {
@@ -201,14 +227,18 @@ export default function Register() {
               CIRCUIT.
             </h1>
 
-            <div className="mt-6 flex flex-wrap items-center gap-3">
-              <span className="px-3 py-1 rounded-full bg-primary/20 border border-primary/30 text-primary text-[10px] font-bold uppercase tracking-widest">
-                Eligibility
-              </span>
-              <p className="text-on-surface-variant text-sm font-medium">
-                College students (Ages 18-24) only. <span className="text-red-400 font-bold">Non-compliance results in disqualification.</span>
-              </p>
-            </div>
+<div className="mt-6 flex flex-wrap items-center gap-3 text-base md:text-lg font-semibold">
+  <span className="px-4 py-2 rounded-full bg-primary/20 border border-primary/40 text-primary font-extrabold uppercase tracking-widest shadow-sm">
+    Eligibility
+  </span>
+
+  <p className="text-on-surface-variant font-medium">
+    College students (Ages 18-24) only.{" "}
+    <span className="text-red-500 font-extrabold bg-red-500/10 px-3 py-1 rounded-md border border-red-500/40 shadow-sm">
+      Non-compliance results in disqualification.
+    </span>
+  </p>
+</div>
 
             <p className="text-on-surface-variant mt-5 max-w-xl text-base md:text-lg">
               Synthesize your ideas with global innovators. 48 hours of pure creation starts here.
@@ -252,11 +282,14 @@ export default function Register() {
                     <div className="space-y-2">
                       <FieldLabel>Full Name</FieldLabel>
                       <InputField
-                        placeholder="Ram Sharma"
+                        placeholder="Your fullname"
                         name="fullName"
+                        type='text'
+                        
                         value={formData.fullName}
                         onChange={handleChange}
                         required
+
                       />
                     </div>
 
@@ -264,7 +297,6 @@ export default function Register() {
                       <div className="space-y-2">
                         <FieldLabel>Email Address</FieldLabel>
                         <InputField
-                          // gmail format
 
                           placeholder="[EMAIL_ADDRESS]"
                           type="email"
@@ -287,20 +319,25 @@ export default function Register() {
                       </div>
                     </div>
 
-                    <div className="space-y-2">
-                      <FieldLabel>Phone Number</FieldLabel>
-                      <InputField
-                        placeholder="+977 98XXXXXXXX"
-                        name="phoneNumber"
-                        value={formData.phoneNumber}
-                        onChange={handleChange}
-                      />
-                    </div>
+<div className="space-y-2">
+  <FieldLabel>Phone Number</FieldLabel>
+  <InputField
+    placeholder="9XXXXXXXXX"
+    name="phoneNumber"
+    value={formData.phoneNumber}
+    onChange={handleChange}
+  />
+  {phoneError && (
+    <p className="text-red-500 text-xs font-medium">
+      {phoneError}
+    </p>
+  )}
+</div>
 
                     <div className="space-y-2">
-                      <FieldLabel>Institution</FieldLabel>
+                      <FieldLabel>College/Institution</FieldLabel>
                       <InputField
-                        placeholder="Orchid International College"
+                        placeholder="e.g. Orchid International College"
                         name="institution"
                         value={formData.institution}
                         onChange={handleChange}
@@ -385,6 +422,7 @@ export default function Register() {
                         name="teamName"
                         value={formData.teamName}
                         onChange={handleChange}
+                        required
                       />
                     </div>
 
