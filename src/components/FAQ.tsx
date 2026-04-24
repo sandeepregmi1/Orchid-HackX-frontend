@@ -164,22 +164,7 @@ export default function FAQ() {
         })}
       </div>
 
-      {/* Bottom hint */}
-      <motion.p
-        initial={{ opacity: 0 }}
-        whileInView={{ opacity: 1 }}
-        viewport={{ once: true }}
-        transition={{ delay: 0.4 }}
-        className="text-center text-xs text-on-surface-variant mt-10 font-label tracking-wide"
-      >
-        Still have questions?{' '}
-        <a
-          href="mailto:orchidhackx@orchidcollege.edu.np"
-          className="text-primary underline underline-offset-2 hover:opacity-75 transition-opacity"
-        >
-          Reach out to us
-        </a>
-      </motion.p>
+    
     </section>
   );
 }
