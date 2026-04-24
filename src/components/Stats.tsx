@@ -20,6 +20,7 @@ export default function Stats() {
             transition={{ delay: index * 0.1 }}
             viewport={{ once: true }}
             className="glass-card p-8 rounded-3xl flex flex-col items-center text-center group hover:bg-surface-container-high transition-all duration-500"
+            style={{ border: '2.5px solid #2e0037' }}
           >
             <div className="w-12 h-12 rounded-2xl bg-primary/10 flex items-center justify-center text-primary mb-4 group-hover:scale-110 transition-transform">
               <stat.icon size={24} />
