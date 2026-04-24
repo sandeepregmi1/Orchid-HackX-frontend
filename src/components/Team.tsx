@@ -1,6 +1,6 @@
 import { motion } from 'motion/react';
 import { Github, Linkedin, Mail, Sparkles, User } from 'lucide-react';
-import sandeepImg from '../assets/team/sandeep.jpeg';
+import sandeepImg from '../assets/team/sandeep.jpg';
 
 interface Member {
   name: string;

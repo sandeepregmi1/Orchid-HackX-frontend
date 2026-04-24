@@ -21,10 +21,10 @@ export default function SelectionCriteria() {
 
           {/* Hero */}
           <div className="text-center mb-20">
-            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-surface-container border border-outline-variant/30 text-sm mb-6">
-              <Sparkles size={16} />
-              Selection Criteria
-            </div>
+      <div className="inline-flex items-center gap-2 px-5 py-3 rounded-full bg-surface-container border border-outline-variant/40 text-base font-semibold text-on-surface mb-6 shadow-sm">
+  <Sparkles size={40} />
+  <span className="text-6xl font-bold tracking-wide">Selection Criteria</span>
+</div>
 
             <h1 className="text-4xl sm:text-6xl font-bold font-syne mb-6 leading-tight">
               Built for <span className="text-primary">Beginners</span><br />

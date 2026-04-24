@@ -21,10 +21,10 @@ export default function CodeOfConduct() {
 
           {/* Hero */}
           <div className="text-center mb-20">
-            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-surface-container border border-outline-variant/30 text-sm mb-6">
-              <Shield size={16} />
-              Code of Conduct
-            </div>
+           <div className="inline-flex items-center gap-2 px-5 py-3 rounded-full bg-surface-container border border-outline-variant/40 text-base font-semibold text-on-surface mb-6 shadow-sm">
+  <Shield size={50} className="text-red-700" />
+  <span className=" text-6xl font-bold tracking-wide text-red-700">Code of Conduct</span>
+</div>
 
             <h1 className="text-4xl sm:text-6xl font-bold font-syne mb-6">
               Building a <span className="text-primary">Safe & Inclusive</span> Hackathon
