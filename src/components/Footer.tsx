@@ -33,24 +33,32 @@ export default function Footer() {
       title: 'Contact Us',
       links: [
         { name: 'orchidhackx@oic.edu.np', href: 'mailto:orchidhackx@oic.edu.np' },
-        { name: '+977-9767413293', href: 'tel:+9779767413293'  },
+        { name: '+977-9767413293', href: 'tel:+9779767413293' },
         { name: '+977-9804902635', href: 'tel:+9779804902635' },
       ],
     },
   ];
 
- return (
+  return (
     <footer className="bg-[#0f0c19] w-full border-t border-primary/20">
       <div className="grid grid-cols-2 md:grid-cols-5 gap-8 px-12 py-16 max-w-7xl mx-auto">
-        
-        <div className="col-span-2 md:col-span-1">
-          <img
-            alt="OrchidHackX Logo"
-            className="h-30 w-auto mb-4"
-            src={logo}
-            referrerPolicy="no-referrer"
-          />
-          <p className="font-dm text-base text-on-surface/90 leading-relaxed">
+
+        <div className="col-span-2 md:col-span-1 flex flex-col justify-start">
+          {/* Wrapper clips the transparent padding baked into the PNG */}
+          <div style={{ height: '75px', overflow: 'hidden' }}>
+            <img
+              alt="OrchidHackX Logo"
+              src={logo}
+              referrerPolicy="no-referrer"
+              style={{
+                height: '120px',
+                width: 'auto',
+                display: 'block',
+                marginTop: '-8px',
+              }}
+            />
+          </div>
+          <p className="font-dm text-base text-on-surface/90 leading-relaxed m-0 mt-2">
             © 2026 OrchidHackX. <br />
             From ideas to innovation.
           </p>
