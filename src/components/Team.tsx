@@ -83,7 +83,7 @@ const teamData: Group[] = [
   {
     title: 'Outreach',
     members: [
-      { name: 'Sanjana Shrestha', role: 'Community Outreach', github: 'https://github.com/Sanjjana11/sanjanaa', linkedin: 'https://www.linkedin.com/in/sanjana-shrestha-b943b9363/' },
+      { name: 'Sanjana Shrestha', role: 'Community Outreach', image: sanjanaImg, github: 'https://github.com/Sanjjana11/sanjanaa', linkedin: 'https://www.linkedin.com/in/sanjana-shrestha-b943b9363/' },
       { name: 'Neha Mahto', role: 'Outreach', image: nehaImg, github: 'https://github.com/Nehamaht04468', linkedin: 'https://www.linkedin.com/in/neha-mahto-299a6b358' },
     ],
   },
