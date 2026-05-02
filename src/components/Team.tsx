@@ -1,6 +1,45 @@
 import { motion } from 'motion/react';
 import { Github, Linkedin, Mail, Sparkles, User } from 'lucide-react';
 import sandeepImg from '../assets/team/sandeep.jpg';
+import anmolImg from '../assets/team/anmol.jpg';
+import nabinImg from '../assets/team/nabin.jpg';
+import aarshiImg from '../assets/team/aarshi.jpg';
+import sushantImg from '../assets/team/shushant.jpg';
+import bidhaImg from '../assets/team/bidha.jpg';
+import nehaImg from '../assets/team/neha.jpg';
+import tashiImg from '../assets/team/tashi.jpg';
+import sanjanaImg from '../assets/team/sanjana.jpg';
+import bigyanImg from '../assets/team/bigyan.jpg';
+import rohanImg from '../assets/team/rohan.jpg';
+import shaishabImg from '../assets/team/saisab.jpg';
+import alijImg from '../assets/team/alij.jpg';
+import prameshImg from '../assets/team/pramesh.jpg';
+
+
+// | Name     | GitHub                                                                           | LinkedIn                                                                                                               |
+// | -------- | -------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------- |
+// | Nabin    | [https://github.com/nabinpurbey03](https://github.com/nabinpurbey03)             | [https://www.linkedin.com/in/nabin-purbey-devops/](https://www.linkedin.com/in/nabin-purbey-devops/)                   |
+// | Tashi    | [https://github.com/Tasi1014](https://github.com/Tasi1014)                       | [https://www.linkedin.com/in/pasang-tasi-sherpa-48254b295/](https://www.linkedin.com/in/pasang-tasi-sherpa-48254b295/) |
+// | Sandeep  | [https://github.com/sandeepregmi1](https://github.com/sandeepregmi1)             | [https://www.linkedin.com/in/sandeep-regmi-b77a54212](https://www.linkedin.com/in/sandeep-regmi-b77a54212)             |
+// | Anmol    | [https://github.com/Anmol99914](https://github.com/Anmol99914)                   | [https://www.linkedin.com/in/anmol-jogi-80403a284/](https://www.linkedin.com/in/anmol-jogi-80403a284/)                 |
+// | Sanjana  | [https://github.com/Sanjjana11/sanjanaa](https://github.com/Sanjjana11/sanjanaa) | [https://www.linkedin.com/in/sanjana-shrestha-b943b9363/](https://www.linkedin.com/in/sanjana-shrestha-b943b9363/)     |
+// | Neha     | [https://github.com/Nehamaht04468](https://github.com/Nehamaht04468)             | [https://www.linkedin.com/in/neha-mahto-299a6b358](https://www.linkedin.com/in/neha-mahto-299a6b358)                   |
+// | Aarshi   | [https://github.com/Aarshi11](https://github.com/Aarshi11)                       | [https://www.linkedin.com/in/aarshi-karki-940b54270](https://www.linkedin.com/in/aarshi-karki-940b54270)               |
+// | Shushant | [https://github.com/sushant0320](https://github.com/sushant0320)                 | [https://www.linkedin.com/in/sushant-shrestha-a919b32a7](https://www.linkedin.com/in/sushant-shrestha-a919b32a7)       |
+// | Bidha    | [https://github.com/bidha-sharma](https://github.com/bidha-sharma)               | [https://www.linkedin.com/in/bidha-sharma-2074bb406](https://www.linkedin.com/in/bidha-sharma-2074bb406)               |
+// | Shaishab | [https://github.com/shaishab-dev](https://github.com/shaishab-dev)               | [https://www.linkedin.com/in/shaishab-karki](https://www.linkedin.com/in/shaishab-karki)                               |
+// | Rohan    | [https://github.com/rohan-khadka](https://github.com/rohan-khadka)               | [https://www.linkedin.com/in/rohan-khadka](https://www.linkedin.com/in/rohan-khadka)                                   |
+// | Alij     | [https://github.com/alij-ansari](https://github.com/alij-ansari)                 | [https://www.linkedin.com/in/alij-ansari](https://www.linkedin.com/in/alij-ansari)                                     |
+// | Pramesh  | [https://github.com/pramesh-thapa](https://github.com/pramesh-thapa)             | [https://www.linkedin.com/in/pramesh-thapa](https://www.linkedin.com/in/pramesh-thapa)                                 |
+// | Bigyan   | [https://github.com/bigyan-shrestha](https://github.com/bigyan-shrestha)         | [https://www.linkedin.com/in/bigyan-shrestha](https://www.linkedin.com/in/bigyan-shrestha)                             |
+
+
+
+
+
+
+
+
 
 interface Member {
   name: string;
@@ -20,13 +59,13 @@ const teamData: Group[] = [
   {
     title: 'LEAD',
     members: [
-      { name: 'Shaishab Dhakal', role: 'Event Lead', github: '#', linkedin: '#' },
+      { name: 'Shaishab Dhakal', role: 'Event Lead', github: 'https://github.com/shaishab-dev', linkedin: 'https://www.linkedin.com/in/shaishab-karki', image: shaishabImg },
     ],
   },
   {
     title: 'LEAD (OPERATION)',
     members: [
-      { name: 'Rohan Bhandari', role: 'Operations Lead', github: '#', linkedin: '#' },
+      { name: 'Rohan Bhandari', role: 'Operations Lead', github: 'https://github.com/rohan-khadka', linkedin: 'https://www.linkedin.com/in/rohan-khadka', image: rohanImg },
     ],
   },
   {
@@ -35,42 +74,42 @@ const teamData: Group[] = [
       {
         name: 'Sandeep Regmi', role: 'Technical Lead', image: sandeepImg, github: 'https://github.com/sandeepregmi1', linkedin: 'https://www.linkedin.com/in/sandeep-regmi-b77a54212',
       },
-      { name: 'Nabin Purbey', role: 'Technical Lead', github: '#', linkedin: '#' },
+      { name: 'Nabin Purbey', role: 'Technical Lead', image: nabinImg, github: 'https://github.com/nabinpurbey03', linkedin: 'https://www.linkedin.com/in/nabin-purbey-devops/' },
     ],
   },
   {
     title: 'Designing',
     members: [
-      { name: 'Aarshi Karki', role: 'Designer', github: '#', linkedin: '#' },
-      { name: 'Sushant Shrestha', role: 'Designer', github: '#', linkedin: '#' },
+      { name: 'Aarshi Karki', role: 'Designer', image: aarshiImg, github: 'https://github.com/Aarshi11', linkedin: 'https://www.linkedin.com/in/aarshi-karki-940b54270' },
+      { name: 'Sushant Shrestha', role: 'Designer', image: sushantImg, github: 'https://github.com/sushant0320', linkedin: 'https://www.linkedin.com/in/sushant-shrestha-a919b32a7' },
     ],
   },
   {
     title: 'Documentation',
     members: [
-      { name: 'Alij Khati', role: 'Documentation', github: '#', linkedin: '#' },
-      { name: 'Pramesh Kandel', role: 'Documentation', github: '#', linkedin: '#' },
+      { name: 'Arij Khati', role: 'Documentation', github: 'https://github.com/alij-ansari', linkedin: 'https://www.linkedin.com/in/alij-ansari', image: alijImg },
+      { name: 'Pramesh Kandel', role: 'Docume ntation', github: 'https://github.com/pramesh-thapa', linkedin: 'https://www.linkedin.com/in/pramesh-thapa', image: prameshImg },
     ],
   },
   {
     title: 'Social Media',
     members: [
-      { name: 'Anmol Jogi', role: 'Media Strategy', github: '#', linkedin: '#' },
-      { name: 'Bidha  Poudel', role: 'Social Lead', github: '#', linkedin: '#' },
+      { name: 'Anmol Jogi', role: 'Media Strategy', image: anmolImg, github: 'https://github.com/Anmol99914', linkedin: 'https://www.linkedin.com/in/anmol-jogi-80403a284/' },
+      { name: 'Bidha Poudel', role: 'Social Lead', image: bidhaImg, github: 'https://github.com/bidha-sharma', linkedin: 'https://www.linkedin.com/in/bidha-sharma-2074bb406' },
     ],
   },
   {
     title: 'Outreach',
     members: [
-      { name: 'Sanjana Shrestha', role: 'Community Outreach', github: '#', linkedin: '#' },
-      { name: 'Neha Mahto', role: 'Outreach', github: '#', linkedin: '#' },
+      { name: 'Sanjana Shrestha', role: 'Community Outreach', github: 'https://github.com/Sanjjana11/sanjanaa', linkedin: 'https://www.linkedin.com/in/sanjana-shrestha-b943b9363/' },
+      { name: 'Neha Mahto', role: 'Outreach', image: nehaImg, github: 'https://github.com/Nehamaht04468', linkedin: 'https://www.linkedin.com/in/neha-mahto-299a6b358' },
     ],
   },
   {
     title: 'Sponsors',
     members: [
-      { name: 'Bigyan Paudyal', role: 'Sponsorship Lead', github: '#', linkedin: '#' },
-      { name: 'Tashi Sherpa', role: 'Sponsor Relations', github: '#', linkedin: '#' },
+      { name: 'Bigyan Paudyal', role: 'Sponsorship Lead', image: bigyanImg, github: 'https://github.com/bigyan-shrestha', linkedin: 'https://www.linkedin.com/in/bigyan-shrestha' },
+      { name: 'Tashi Sherpa', role: 'Sponsor Relations', image: tashiImg, github: 'https://github.com/Tasi1014', linkedin: 'https://www.linkedin.com/in/pasang-tasi-sherpa-48254b295/' },
     ],
   },
 ];
