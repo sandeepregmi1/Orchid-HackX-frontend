@@ -6,7 +6,7 @@ import { useNavigate, Link } from 'react-router-dom';
 import Footer from '../components/Footer';
 
 interface LabelProps {
-  children: string;
+    children: React.ReactNode;
 }
 
 function FieldLabel({ children }: LabelProps) {
@@ -124,8 +124,8 @@ const handleChange = (
       institution: formData.institution,
       role: formData.role,
       track: selectedTrack,
-      github_portfolio: formData.githubPortfolio,
-      linkedin: formData.linkedin,
+      github_portfolio: formData.githubPortfolio || null,  
+      linkedin: formData.linkedin || null,
       team_name: formData.teamName,
       team_size: parseInt(teamSize),
       experience: formData.experience,
@@ -280,7 +280,9 @@ const handleChange = (
                     <h2 className="font-syne text-3xl md:text-4xl font-semibold text-on-surface">01. Participant Identity</h2>
 
                     <div className="space-y-2">
-                      <FieldLabel>Full Name</FieldLabel>
+                      <FieldLabel>
+                       Full Name <span className="text-red-500 text-lg font-bold">*</span>
+                      </FieldLabel>
                       <InputField
                         placeholder="Your fullname"
                         name="fullName"
@@ -295,7 +297,10 @@ const handleChange = (
 
                     <div className="grid grid-cols-2 gap-4">
                       <div className="space-y-2">
-                        <FieldLabel>Email Address</FieldLabel>
+                        <FieldLabel>Email Address
+                          <span className="text-red-500 text-lg font-bold">*</span>
+
+                        </FieldLabel>
                         <InputField
 
                           placeholder="[EMAIL_ADDRESS]"
@@ -307,7 +312,9 @@ const handleChange = (
                         />
                       </div>
                       <div className="space-y-2">
-                        <FieldLabel>Age</FieldLabel>
+                        <FieldLabel>Age
+                          <span className="text-red-500 text-lg font-bold">*</span>
+                        </FieldLabel>
                         <InputField
                           placeholder="18-24"
                           type="number"
@@ -320,7 +327,9 @@ const handleChange = (
                     </div>
 
 <div className="space-y-2">
-  <FieldLabel>Phone Number</FieldLabel>
+  <FieldLabel>Phone Number
+    <span className="text-red-500 text-lg font-bold">*</span>
+  </FieldLabel>
   <InputField
     placeholder="9XXXXXXXXX"
     name="phoneNumber"
@@ -335,7 +344,9 @@ const handleChange = (
 </div>
 
                     <div className="space-y-2">
-                      <FieldLabel>College/Institution</FieldLabel>
+                      <FieldLabel>College/Institution
+                        <span className="text-red-500 text-lg font-bold">*</span>
+                      </FieldLabel>
                       <InputField
                         placeholder="e.g. Orchid International College"
                         name="institution"
@@ -350,7 +361,9 @@ const handleChange = (
                     <h2 className="font-syne text-3xl md:text-4xl font-semibold text-on-surface">02. Skillset & Focus</h2>
 
                     <div className="space-y-2">
-                      <FieldLabel>Your Role</FieldLabel>
+                      <FieldLabel>Your Role
+                        <span className="text-red-500 text-lg font-bold">*</span>
+                      </FieldLabel>
                       <select
                         name="role"
                         value={formData.role}
@@ -365,7 +378,9 @@ const handleChange = (
                     </div>
 
                     <div className="space-y-3">
-                      <FieldLabel>Track of Interest</FieldLabel>
+                      <FieldLabel>Track of Interest
+                        <span className="text-red-500 text-lg font-bold">*</span>
+                      </FieldLabel>
                       <div className="grid sm:grid-cols-2 gap-3">
                         {tracks.map((track) => (
                           <label
@@ -387,13 +402,13 @@ const handleChange = (
 
                     <div className="grid sm:grid-cols-2 gap-4">
                       <div className="space-y-2">
-                        <FieldLabel>GitHub / Portfolio</FieldLabel>
+                        <FieldLabel>GitHub / Portfolio (Optional)</FieldLabel>
                         <InputField
                           placeholder="github.com/..."
                           name="githubPortfolio"
                           value={formData.githubPortfolio}
                           onChange={handleChange}
-                          required
+                      
                         />
                       </div>
                       <div className="space-y-2">
@@ -406,6 +421,11 @@ const handleChange = (
                         />
                       </div>
                     </div>
+
+<p className="text-sm italic text-red-500 mt-2 bg-red-500/10 px-3 py-2 rounded-md border border-red-500/30">
+  *Adding your GitHub or portfolio will improve your selection chances.
+</p>
+
                   </div>
                 </div>
 
@@ -416,7 +436,9 @@ const handleChange = (
 
                   <div className="grid lg:grid-cols-[1fr_auto] gap-6 items-end">
                     <div className="space-y-2">
-                      <FieldLabel>Team Name (Optional)</FieldLabel>
+                      <FieldLabel>Team Name 
+                        <span className="text-red-500 text-lg font-bold">*</span>
+                      </FieldLabel>
                       <InputField
                         placeholder="The Binary Orchids"
                         name="teamName"
@@ -427,7 +449,9 @@ const handleChange = (
                     </div>
 
                     <div className="space-y-2">
-                      <FieldLabel>Team Size</FieldLabel>
+                      <FieldLabel>Team Size
+                        <span className="text-red-500 text-lg font-bold">*</span>
+                      </FieldLabel>
                       <div className="flex gap-2.5">
                         {teamSizes.map((size) => (
                           <button
@@ -447,7 +471,9 @@ const handleChange = (
                   </div>
 
                   <div className="space-y-2">
-                    <FieldLabel>Any prior hackathon experience?</FieldLabel>
+                    <FieldLabel>Any prior hackathon experience?
+                      <span className="text-red-500 text-lg font-bold">*</span>
+                    </FieldLabel>
                     <textarea
                       rows={4}
                       required
@@ -461,7 +487,9 @@ const handleChange = (
 
                   <div className="space-y-4">
                     <div className="flex items-center justify-between">
-                      <FieldLabel>Additional Team Members (Required)</FieldLabel>
+                      <FieldLabel>Additional Team Members (Required)
+                        <span className="text-red-500 text-lg font-bold">*</span>
+                      </FieldLabel>
                       <button
                         type="button"
                         onClick={addTeamMember}
