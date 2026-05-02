@@ -16,24 +16,6 @@ import alijImg from '../assets/team/alij.jpg';
 import prameshImg from '../assets/team/pramesh.jpg';
 
 
-// | Name     | GitHub                                                                           | LinkedIn                                                                                                               |
-// | -------- | -------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------- |
-// | Nabin    | [https://github.com/nabinpurbey03](https://github.com/nabinpurbey03)             | [https://www.linkedin.com/in/nabin-purbey-devops/](https://www.linkedin.com/in/nabin-purbey-devops/)                   |
-// | Tashi    | [https://github.com/Tasi1014](https://github.com/Tasi1014)                       | [https://www.linkedin.com/in/pasang-tasi-sherpa-48254b295/](https://www.linkedin.com/in/pasang-tasi-sherpa-48254b295/) |
-// | Sandeep  | [https://github.com/sandeepregmi1](https://github.com/sandeepregmi1)             | [https://www.linkedin.com/in/sandeep-regmi-b77a54212](https://www.linkedin.com/in/sandeep-regmi-b77a54212)             |
-// | Anmol    | [https://github.com/Anmol99914](https://github.com/Anmol99914)                   | [https://www.linkedin.com/in/anmol-jogi-80403a284/](https://www.linkedin.com/in/anmol-jogi-80403a284/)                 |
-// | Sanjana  | [https://github.com/Sanjjana11/sanjanaa](https://github.com/Sanjjana11/sanjanaa) | [https://www.linkedin.com/in/sanjana-shrestha-b943b9363/](https://www.linkedin.com/in/sanjana-shrestha-b943b9363/)     |
-// | Neha     | [https://github.com/Nehamaht04468](https://github.com/Nehamaht04468)             | [https://www.linkedin.com/in/neha-mahto-299a6b358](https://www.linkedin.com/in/neha-mahto-299a6b358)                   |
-// | Aarshi   | [https://github.com/Aarshi11](https://github.com/Aarshi11)                       | [https://www.linkedin.com/in/aarshi-karki-940b54270](https://www.linkedin.com/in/aarshi-karki-940b54270)               |
-// | Shushant | [https://github.com/sushant0320](https://github.com/sushant0320)                 | [https://www.linkedin.com/in/sushant-shrestha-a919b32a7](https://www.linkedin.com/in/sushant-shrestha-a919b32a7)       |
-// | Bidha    | [https://github.com/bidha-sharma](https://github.com/bidha-sharma)               | [https://www.linkedin.com/in/bidha-sharma-2074bb406](https://www.linkedin.com/in/bidha-sharma-2074bb406)               |
-// | Shaishab | [https://github.com/shaishab-dev](https://github.com/shaishab-dev)               | [https://www.linkedin.com/in/shaishab-karki](https://www.linkedin.com/in/shaishab-karki)                               |
-// | Rohan    | [https://github.com/rohan-khadka](https://github.com/rohan-khadka)               | [https://www.linkedin.com/in/rohan-khadka](https://www.linkedin.com/in/rohan-khadka)                                   |
-// | Alij     | [https://github.com/alij-ansari](https://github.com/alij-ansari)                 | [https://www.linkedin.com/in/alij-ansari](https://www.linkedin.com/in/alij-ansari)                                     |
-// | Pramesh  | [https://github.com/pramesh-thapa](https://github.com/pramesh-thapa)             | [https://www.linkedin.com/in/pramesh-thapa](https://www.linkedin.com/in/pramesh-thapa)                                 |
-// | Bigyan   | [https://github.com/bigyan-shrestha](https://github.com/bigyan-shrestha)         | [https://www.linkedin.com/in/bigyan-shrestha](https://www.linkedin.com/in/bigyan-shrestha)                             |
-
-
 
 
 
