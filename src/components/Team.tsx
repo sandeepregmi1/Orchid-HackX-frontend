@@ -69,7 +69,7 @@ const teamData: Group[] = [
   {
     title: 'Documentation',
     members: [
-      { name: 'Arij Khati', role: 'Documentation', github: 'https://github.com/alij-ansari', linkedin: 'https://www.linkedin.com/in/alij-ansari', image: alijImg },
+      { name: 'Arij Khati', role: 'Documentation', github: 'https://github.com/Alijkhati', linkedin: 'https://www.linkedin.com/in/alij-khati-8b719135a/', image: alijImg },
       { name: 'Pramesh Kandel', role: 'Docume ntation', github: 'https://github.com/pramesh-thapa', linkedin: 'https://www.linkedin.com/in/pramesh-thapa', image: prameshImg },
     ],
   },
