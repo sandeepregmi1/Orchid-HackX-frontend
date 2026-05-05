@@ -6,7 +6,7 @@ import { useNavigate, Link } from 'react-router-dom';
 import Footer from '../components/Footer';
 
 interface LabelProps {
-    children: React.ReactNode;
+  children: React.ReactNode;
 }
 
 function FieldLabel({ children }: LabelProps) {
@@ -26,14 +26,22 @@ interface InputProps {
   name?: string;
   value?: string | number;
   onChange?: (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => void;
+  min?: string | number;
+  max?: string | number;
+  maxLength?: number;
+  pattern?: string;
+  title?: string;
 }
 
 interface TeamMember {
   name: string;
   github: string;
+  email: string;
+  age: string;
+  phoneNumber: string;
 }
 
-function InputField({ placeholder, type = 'text', required = false, name, value, onChange }: InputProps) {
+function InputField({ placeholder, type = 'text', required = false, name, value, onChange, min, max, maxLength, pattern, title }: InputProps) {
   return (
     <input
       required={required}
@@ -42,6 +50,11 @@ function InputField({ placeholder, type = 'text', required = false, name, value,
       value={value}
       onChange={onChange}
       placeholder={placeholder}
+      min={min}
+      max={max}
+      maxLength={maxLength}
+      pattern={pattern}
+      title={title}
       className="w-full bg-black/80 border border-outline-variant/40 rounded-lg px-4 py-3.5 text-sm text-on-surface placeholder:text-on-surface-variant/70 focus:outline-none focus:border-primary transition-colors"
     />
   );
@@ -68,15 +81,15 @@ export default function Register() {
 
 
   const validatePhoneNumber = (phone: string) => /^9\d{9}$/.test(phone);
-const [phoneError, setPhoneError] = useState('');
+  const [phoneError, setPhoneError] = useState('');
 
 
   const [teamSize, setTeamSize] = useState('3');
   const [selectedTrack, setSelectedTrack] = useState('AI / ML');
   const [cocAccepted, setCocAccepted] = useState(false);
   const [teamMembers, setTeamMembers] = useState<TeamMember[]>([
-    { name: '', github: '' },
-    { name: '', github: '' },
+    { name: '', github: '', email: '', age: '', phoneNumber: '' },
+    { name: '', github: '', email: '', age: '', phoneNumber: '' },
   ]);
 
   const navigate = useNavigate();
@@ -84,36 +97,63 @@ const [phoneError, setPhoneError] = useState('');
   const tracks = ['AI / ML', 'Open Innovation', 'CyberSecurity'];
   const teamSizes = ['3', '4'];
 
-const handleChange = (
-  e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>
-) => {
-  const { name, value } = e.target;
+  const handleChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>
+  ) => {
+    const { name, value } = e.target;
 
-  setFormData(prev => ({ ...prev, [name]: value }));
+    setFormData(prev => ({ ...prev, [name]: value }));
 
-  if (name === 'phoneNumber') {
-    if (value.length === 0) {
-      setPhoneError('');
-    } else if (!/^9\d{0,9}$/.test(value)) {
-      setPhoneError('Phone must start with 9 and contain only digits');
-    } else if (value.length === 10 && !validatePhoneNumber(value)) {
-      setPhoneError('Phone number must be 10 digits starting with 9');
-    } else {
-      setPhoneError('');
+    if (name === 'phoneNumber') {
+      if (value.length === 0) {
+        setPhoneError('');
+      } else if (!/^9\d{0,9}$/.test(value)) {
+        setPhoneError('Phone must start with 9 and contain only digits');
+      } else if (value.length === 10 && !validatePhoneNumber(value)) {
+        setPhoneError('Phone number must be 10 digits starting with 9');
+      } else {
+        setPhoneError('');
+      }
     }
-  }
-};
+  };
 
   const handleSubmit = async (e: FormEvent) => {
     e.preventDefault();
     setLoading(true);
     setIsError(false);
 
+    const userAge = parseInt(formData.age);
+    if (isNaN(userAge) || userAge < 18 || userAge > 24) {
+      setIsError(true);
+      setErrorMessage('Participant age must be between 18 and 24 years old');
+      setLoading(false);
+      return;
+    }
+
     if (!/^9\d{9}$/.test(formData.phoneNumber)) {
-  setIsError(true);
-  setErrorMessage('Phone number must be 10 digits starting with 9');
-  return;
-}
+      setIsError(true);
+      setErrorMessage('Phone number must be 10 digits starting with 9');
+      setLoading(false);
+      return;
+    }
+
+    // Validate team members
+    for (let i = 0; i < teamMembers.length; i++) {
+      const member = teamMembers[i];
+      const memberAge = parseInt(member.age);
+      if (isNaN(memberAge) || memberAge < 18 || memberAge > 24) {
+        setIsError(true);
+        setErrorMessage(`Team member ${member.name || i + 2} must be between 18 and 24 years old`);
+        setLoading(false);
+        return;
+      }
+      if (!/^9\d{9}$/.test(member.phoneNumber)) {
+        setIsError(true);
+        setErrorMessage(`Team member ${member.name || i + 2} phone number must be 10 digits starting with 9`);
+        setLoading(false);
+        return;
+      }
+    }
 
     // Prepare JSON payload for Backend
     const payload = {
@@ -124,7 +164,7 @@ const handleChange = (
       institution: formData.institution,
       role: formData.role,
       track: selectedTrack,
-      github_portfolio: formData.githubPortfolio || null,  
+      github_portfolio: formData.githubPortfolio || null,
       linkedin: formData.linkedin || null,
       team_name: formData.teamName,
       team_size: parseInt(teamSize),
@@ -165,7 +205,7 @@ const handleChange = (
 
   const addTeamMember = () => {
     if (teamMembers.length < 3) {
-      setTeamMembers((prev) => [...prev, { name: '', github: '' }]);
+      setTeamMembers((prev) => [...prev, { name: '', github: '', email: '', age: '', phoneNumber: '' }]);
       setTeamSize('4');
     }
   };
@@ -227,18 +267,18 @@ const handleChange = (
               CIRCUIT.
             </h1>
 
-<div className="mt-6 flex flex-wrap items-center gap-3 text-base md:text-lg font-semibold">
-  <span className="px-4 py-2 rounded-full bg-primary/20 border border-primary/40 text-primary font-extrabold uppercase tracking-widest shadow-sm">
-    Eligibility
-  </span>
+            <div className="mt-6 flex flex-wrap items-center gap-3 text-base md:text-lg font-semibold">
+              <span className="px-4 py-2 rounded-full bg-primary/20 border border-primary/40 text-primary font-extrabold uppercase tracking-widest shadow-sm">
+                Eligibility
+              </span>
 
-  <p className="text-on-surface-variant font-medium">
-    College students (Ages 18-24) only.{" "}
-    <span className="text-red-500 font-extrabold bg-red-500/10 px-3 py-1 rounded-md border border-red-500/40 shadow-sm">
-      Non-compliance results in disqualification.
-    </span>
-  </p>
-</div>
+              <p className="text-on-surface-variant font-medium">
+                College students (Ages 18-24) only.{" "}
+                <span className="text-red-500 font-extrabold bg-red-500/10 px-3 py-1 rounded-md border border-red-500/40 shadow-sm">
+                  Non-compliance results in disqualification.
+                </span>
+              </p>
+            </div>
 
             <p className="text-on-surface-variant mt-5 max-w-xl text-base md:text-lg">
               Synthesize your ideas with global innovators. 48 hours of pure creation starts here.
@@ -281,13 +321,13 @@ const handleChange = (
 
                     <div className="space-y-2">
                       <FieldLabel>
-                       Full Name <span className="text-red-500 text-lg font-bold">*</span>
+                        Full Name <span className="text-red-500 text-lg font-bold">*</span>
                       </FieldLabel>
                       <InputField
                         placeholder="Your fullname"
                         name="fullName"
                         type='text'
-                        
+
                         value={formData.fullName}
                         onChange={handleChange}
                         required
@@ -322,26 +362,32 @@ const handleChange = (
                           value={formData.age}
                           onChange={handleChange}
                           required
+                          min="18"
+                          max="24"
                         />
                       </div>
                     </div>
 
-<div className="space-y-2">
-  <FieldLabel>Phone Number
-    <span className="text-red-500 text-lg font-bold">*</span>
-  </FieldLabel>
-  <InputField
-    placeholder="9XXXXXXXXX"
-    name="phoneNumber"
-    value={formData.phoneNumber}
-    onChange={handleChange}
-  />
-  {phoneError && (
-    <p className="text-red-500 text-xs font-medium">
-      {phoneError}
-    </p>
-  )}
-</div>
+                    <div className="space-y-2">
+                      <FieldLabel>Phone Number
+                        <span className="text-red-500 text-lg font-bold">*</span>
+                      </FieldLabel>
+                      <InputField
+                        placeholder="9XXXXXXXXX"
+                        name="phoneNumber"
+                        value={formData.phoneNumber}
+                        onChange={handleChange}
+                        required
+                        maxLength={10}
+                        pattern="^9\d{9}$"
+                        title="Phone number must be 10 digits starting with 9"
+                      />
+                      {phoneError && (
+                        <p className="text-red-500 text-xs font-medium">
+                          {phoneError}
+                        </p>
+                      )}
+                    </div>
 
                     <div className="space-y-2">
                       <FieldLabel>College/Institution
@@ -408,7 +454,7 @@ const handleChange = (
                           name="githubPortfolio"
                           value={formData.githubPortfolio}
                           onChange={handleChange}
-                      
+
                         />
                       </div>
                       <div className="space-y-2">
@@ -422,9 +468,9 @@ const handleChange = (
                       </div>
                     </div>
 
-<p className="text-sm italic text-red-500 mt-2 bg-red-500/10 px-3 py-2 rounded-md border border-red-500/30">
-  *Adding your GitHub or portfolio will improve your selection chances.
-</p>
+                    <p className="text-sm italic text-red-500 mt-2 bg-red-500/10 px-3 py-2 rounded-md border border-red-500/30">
+                      *Adding your GitHub or portfolio will improve your selection chances.
+                    </p>
 
                   </div>
                 </div>
@@ -436,7 +482,7 @@ const handleChange = (
 
                   <div className="grid lg:grid-cols-[1fr_auto] gap-6 items-end">
                     <div className="space-y-2">
-                      <FieldLabel>Team Name 
+                      <FieldLabel>Team Name
                         <span className="text-red-500 text-lg font-bold">*</span>
                       </FieldLabel>
                       <InputField
@@ -504,35 +550,65 @@ const handleChange = (
                       {teamMembers.map((member, index) => (
                         <div
                           key={`member-${index}`}
-                          className="grid md:grid-cols-[1fr_1fr_auto] gap-3 items-center"
+                          className="flex flex-col gap-3 p-4 border border-outline-variant/20 rounded-xl bg-black/40 relative"
                         >
-                          <input
-                            type="text"
-                            required
-                            value={member.name}
-                            onChange={(e) =>
-                              updateTeamMember(index, 'name', e.target.value)
-                            }
-                            placeholder={`Team Member ${index + 2} Name`}
-                            className="w-full bg-black/80 border border-outline-variant/40 rounded-lg px-4 py-3 text-sm text-on-surface placeholder:text-on-surface-variant/70 focus:outline-none focus:border-primary transition-colors"
-                          />
-                          <input
-                            type="text"
-                            value={member.github}
-                            onChange={(e) =>
-                              updateTeamMember(index, 'github', e.target.value)
-                            }
-                            placeholder="github.com/username (Optional)"
-                            className="w-full bg-black/80 border border-outline-variant/40 rounded-lg px-4 py-3 text-sm text-on-surface placeholder:text-on-surface-variant/70 focus:outline-none focus:border-primary transition-colors"
-                          />
-                          <button
-                            type="button"
-                            onClick={() => removeTeamMember(index)}
-                            disabled={teamMembers.length <= 2}
-                            className="px-3 py-2 rounded-lg border border-outline-variant/40 text-on-surface-variant hover:text-on-surface hover:border-primary/40 disabled:opacity-40 disabled:cursor-not-allowed transition-colors"
-                          >
-                            Remove
-                          </button>
+                          <div className="flex justify-between items-center">
+                            <span className="text-sm font-semibold text-on-surface">Team Member {index + 2}</span>
+                            <button
+                              type="button"
+                              onClick={() => removeTeamMember(index)}
+                              disabled={teamMembers.length <= 2}
+                              className="px-3 py-1.5 rounded-lg border border-outline-variant/40 text-on-surface-variant hover:text-on-surface hover:border-red-500/40 hover:text-red-500 disabled:opacity-40 disabled:cursor-not-allowed transition-colors text-xs"
+                            >
+                              Remove
+                            </button>
+                          </div>
+                          <div className="grid md:grid-cols-2 gap-3">
+                            <input
+                              type="text"
+                              required
+                              value={member.name}
+                              onChange={(e) => updateTeamMember(index, 'name', e.target.value)}
+                              placeholder={`Name *`}
+                              className="w-full bg-black/80 border border-outline-variant/40 rounded-lg px-4 py-3 text-sm text-on-surface placeholder:text-on-surface-variant/70 focus:outline-none focus:border-primary transition-colors"
+                            />
+                            <input
+                              type="email"
+                              required
+                              value={member.email}
+                              onChange={(e) => updateTeamMember(index, 'email', e.target.value)}
+                              placeholder="Email Address *"
+                              className="w-full bg-black/80 border border-outline-variant/40 rounded-lg px-4 py-3 text-sm text-on-surface placeholder:text-on-surface-variant/70 focus:outline-none focus:border-primary transition-colors"
+                            />
+                            <input
+                              type="number"
+                              required
+                              min="18"
+                              max="24"
+                              value={member.age}
+                              onChange={(e) => updateTeamMember(index, 'age', e.target.value)}
+                              placeholder="Age *"
+                              className="w-full bg-black/80 border border-outline-variant/40 rounded-lg px-4 py-3 text-sm text-on-surface placeholder:text-on-surface-variant/70 focus:outline-none focus:border-primary transition-colors"
+                            />
+                            <input
+                              type="text"
+                              required
+                              maxLength={10}
+                              pattern="^9\d{9}$"
+                              title="Phone number must be 10 digits starting with 9"
+                              value={member.phoneNumber}
+                              onChange={(e) => updateTeamMember(index, 'phoneNumber', e.target.value)}
+                              placeholder="Phone Number *"
+                              className="w-full bg-black/80 border border-outline-variant/40 rounded-lg px-4 py-3 text-sm text-on-surface placeholder:text-on-surface-variant/70 focus:outline-none focus:border-primary transition-colors"
+                            />
+                            <input
+                              type="text"
+                              value={member.github}
+                              onChange={(e) => updateTeamMember(index, 'github', e.target.value)}
+                              placeholder="github.com/username (Optional)"
+                              className="w-full md:col-span-2 bg-black/80 border border-outline-variant/40 rounded-lg px-4 py-3 text-sm text-on-surface placeholder:text-on-surface-variant/70 focus:outline-none focus:border-primary transition-colors"
+                            />
+                          </div>
                         </div>
                       ))}
                     </div>
