@@ -41,7 +41,7 @@ const teamData: Group[] = [
   {
     title: 'LEAD',
     members: [
-      { name: 'Shaishab Dhakal', role: 'Event Lead', github: 'https://github.com/shaishab-dev', linkedin: 'https://www.linkedin.com/in/shaishab-karki', image: shaishabImg },
+      { name: 'Shaishab Dhakal', role: 'Event Lead', github: 'https://github.com/shaidkl', linkedin: 'https://www.linkedin.com/in/saisab-dhakal-9ab48a375?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app', image: shaishabImg },
     ],
   },
   {
@@ -70,7 +70,7 @@ const teamData: Group[] = [
     title: 'Documentation',
     members: [
       { name: 'Arij Khati', role: 'Documentation', github: 'https://github.com/Alijkhati', linkedin: 'https://www.linkedin.com/in/alij-khati-8b719135a/', image: alijImg },
-      { name: 'Pramesh Kandel', role: 'Docume ntation', github: 'https://github.com/pramesh-thapa', linkedin: 'https://www.linkedin.com/in/pramesh-thapa', image: prameshImg },
+      { name: 'Pramesh Kandel', role: 'Docume ntation', github: 'https://github.com/pramesh-thapa', linkedin: 'https://www.linkedin.com/in/kandel-pramesh-391784168', image: prameshImg },
     ],
   },
   {

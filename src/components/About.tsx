@@ -177,7 +177,7 @@ export default function About() {
 
                         <span className="flex items-center gap-2 justify-center text-white text-xl/10 tracking-[0.15em]">
                             <Calendar size={18} />
-                            19th – 21st June 2026
+                            10th – 12th July 2026
                         </span>
                     </p>
 

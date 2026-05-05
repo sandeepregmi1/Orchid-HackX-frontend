@@ -5,7 +5,7 @@ export default function Stats() {
   const stats = [
     { label: 'Participants', value: '100+', icon: Users },
     { label: 'Hours', value: '48', icon: Code },
-    { label: 'Prizes', value: 'NRs 95K', icon: Trophy },
+    { label: 'Prizes', value: 'NRs 115K', icon: Trophy },
     { label: 'Location', value: 'KTM', icon: MapPin },
   ];
 
@@ -25,7 +25,7 @@ export default function Stats() {
             <div className="w-12 h-12 rounded-2xl bg-primary/10 flex items-center justify-center text-primary mb-4 group-hover:scale-110 transition-transform">
               <stat.icon size={24} />
             </div>
-            <span className="text-4xl md:text-5xl font-syne font-bold text-on-surface mb-1">
+            <span className="text-4xl md:text-5xl font-label font-bold text-on-surface mb-1">
               {stat.value}
             </span>
             <span className="text-sm font-label uppercase text-on-surface-variant tracking-widest">
