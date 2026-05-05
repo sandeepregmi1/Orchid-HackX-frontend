@@ -74,7 +74,7 @@ export default function Hero() {
         transition={{ duration: 1, delay: 1 }}
         className="max-w-2xl text-white text-lg mb-6 md:text-xl font-dm relative z-10"
       >
-        19th – 21st June 2026 • 48 Hours of Pure Creation
+        10th – 12th July 2026 • 48 Hours of Pure Creation
       </motion.p>
 
       {/* Live Countdown Timer */}
