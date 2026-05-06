@@ -82,7 +82,7 @@ export default function Navbar({ onRegisterClick, onHomeClick }: NavbarProps) {
 
         <div className="flex items-center gap-4">
           <motion.a
-            href="https://discord.gg/orchidcommunity"
+            href="https://discord.gg/BjDExXwXhp"
             target="_blank"
             rel="noopener noreferrer"
             whileHover={{ scale: 1.05 }}
@@ -142,7 +142,7 @@ export default function Navbar({ onRegisterClick, onHomeClick }: NavbarProps) {
             </div>
           ))}
           <a
-            href="https://discord.gg/z5Mg33yeYN"
+            href="https://discord.gg/BjDExXwXhp"
             target="_blank"
             rel="noopener noreferrer"
             className="text-primary hover:text-primary-dim transition-colors block pt-2 border-t border-outline-variant/20"
