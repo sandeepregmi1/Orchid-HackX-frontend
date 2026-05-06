@@ -16,7 +16,7 @@ export default function Footer() {
     {
       title: 'Community',
       links: [
-        { name: 'Discord', href: 'https://discord.gg/NAD2dFR5P' },
+        { name: 'Discord', href: 'https://discord.gg/BjDExXwXhp' },
         { name: 'Instagram', href: 'https://www.instagram.com/orchid_hackx?igsh=MWJiNTVldm43aDRzeQ%3D%3D' },
         { name: 'TikTok', href: 'https://www.tiktok.com/@hackx_oic' },
       ],
