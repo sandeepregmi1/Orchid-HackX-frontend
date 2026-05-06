@@ -60,35 +60,35 @@ const teamData: Group[] = [
     ],
   },
   {
-    title: 'Designing',
+    title: 'Designing Team',
     members: [
       { name: 'Aarshi Karki', role: 'Designer', image: aarshiImg, github: 'https://github.com/Aarshi11', linkedin: 'https://www.linkedin.com/in/aarshi-karki-940b54270' },
       { name: 'Sushant Shrestha', role: 'Designer', image: sushantImg, github: 'https://github.com/sushant0320', linkedin: 'https://www.linkedin.com/in/sushant-shrestha-a919b32a7' },
     ],
   },
   {
-    title: 'Documentation',
+    title: 'Documentation Team',
     members: [
       { name: 'Arij Khati', role: 'Documentation', github: 'https://github.com/Alijkhati', linkedin: 'https://www.linkedin.com/in/alij-khati-8b719135a/', image: alijImg },
       { name: 'Pramesh Kandel', role: 'Docume ntation', github: 'https://github.com/pramesh-thapa', linkedin: 'https://www.linkedin.com/in/kandel-pramesh-391784168', image: prameshImg },
     ],
   },
   {
-    title: 'Social Media',
+    title: 'Social Media Team',
     members: [
       { name: 'Anmol Jogi', role: 'Media Strategy', image: anmolImg, github: 'https://github.com/Anmol99914', linkedin: 'https://www.linkedin.com/in/anmol-jogi-80403a284/' },
       { name: 'Bidha Poudel', role: 'Social Lead', image: bidhaImg, github: 'https://github.com/bidha-sharma', linkedin: 'https://www.linkedin.com/in/bidha-sharma-2074bb406' },
     ],
   },
   {
-    title: 'Outreach',
+    title: 'Outreach Team',
     members: [
       { name: 'Sanjana Shrestha', role: 'Community Outreach', image: sanjanaImg, github: 'https://github.com/Sanjjana11/sanjanaa', linkedin: 'https://www.linkedin.com/in/sanjana-shrestha-b943b9363/' },
       { name: 'Neha Mahto', role: 'Outreach', image: nehaImg, github: 'https://github.com/Nehamaht04468', linkedin: 'https://www.linkedin.com/in/neha-mahto-299a6b358' },
     ],
   },
   {
-    title: 'Sponsors',
+    title: 'Sponsors Team',
     members: [
       { name: 'Bigyan Paudyal', role: 'Sponsorship Lead', image: bigyanImg, github: 'https://github.com/bigyan-shrestha', linkedin: 'https://www.linkedin.com/in/bigyan-shrestha' },
       { name: 'Tashi Sherpa', role: 'Sponsor Relations', image: tashiImg, github: 'https://github.com/Tasi1014', linkedin: 'https://www.linkedin.com/in/pasang-tasi-sherpa-48254b295/' },

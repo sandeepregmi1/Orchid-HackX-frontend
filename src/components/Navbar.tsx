@@ -142,7 +142,7 @@ export default function Navbar({ onRegisterClick, onHomeClick }: NavbarProps) {
             </div>
           ))}
           <a
-            href="https://discord.gg/NAD2dFR5P"
+            href="https://discord.gg/z5Mg33yeYN"
             target="_blank"
             rel="noopener noreferrer"
             className="text-primary hover:text-primary-dim transition-colors block pt-2 border-t border-outline-variant/20"
