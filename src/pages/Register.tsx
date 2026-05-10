@@ -123,9 +123,9 @@ export default function Register() {
     setIsError(false);
 
     const userAge = parseInt(formData.age);
-    if (isNaN(userAge) || userAge < 18 || userAge > 24) {
+    if (isNaN(userAge) || userAge < 18 || userAge > 25) {
       setIsError(true);
-      setErrorMessage('Participant age must be between 18 and 24 years old');
+      setErrorMessage('Participant age must be between 18 and 25 years old');
       setLoading(false);
       return;
     }
@@ -141,9 +141,9 @@ export default function Register() {
     for (let i = 0; i < teamMembers.length; i++) {
       const member = teamMembers[i];
       const memberAge = parseInt(member.age);
-      if (isNaN(memberAge) || memberAge < 18 || memberAge > 24) {
+      if (isNaN(memberAge) || memberAge < 18 || memberAge > 25) {
         setIsError(true);
-        setErrorMessage(`Team member ${member.name || i + 2} must be between 18 and 24 years old`);
+        setErrorMessage(`Team member ${member.name || i + 2} must be between 18 and 25 years old`);
         setLoading(false);
         return;
       }
@@ -273,7 +273,7 @@ export default function Register() {
               </span>
 
               <p className="text-on-surface-variant font-medium">
-                College students (Ages 18-24) only.{" "}
+                College students (Ages 18-25) only.{" "}
                 <span className="text-red-500 font-extrabold bg-red-500/10 px-3 py-1 rounded-md border border-red-500/40 shadow-sm">
                   Non-compliance results in disqualification.
                 </span>
@@ -356,14 +356,14 @@ export default function Register() {
                           <span className="text-red-500 text-lg font-bold">*</span>
                         </FieldLabel>
                         <InputField
-                          placeholder="18-24"
+                          placeholder="18-25"
                           type="number"
                           name="age"
                           value={formData.age}
                           onChange={handleChange}
                           required
                           min="18"
-                          max="24"
+                          max="25"
                         />
                       </div>
                     </div>
@@ -584,7 +584,7 @@ export default function Register() {
                               type="number"
                               required
                               min="18"
-                              max="24"
+                              max="25"
                               value={member.age}
                               onChange={(e) => updateTeamMember(index, 'age', e.target.value)}
                               placeholder="Age *"

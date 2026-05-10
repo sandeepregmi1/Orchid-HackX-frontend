@@ -126,7 +126,7 @@ export default function CodeOfConduct() {
                 <p className="text-base sm:text-lg leading-relaxed text-on-surface flex items-center gap-3">
                   <Shield size={20} className="text-primary shrink-0" />
                   <span>
-                    <strong>Eligibility:</strong> College students <strong>(Ages 18-24)</strong> only. Non-compliance results in <strong>disqualification</strong>.
+                    <strong>Eligibility:</strong> College students <strong>(Ages 18-25)</strong> only. Non-compliance results in <strong>disqualification</strong>.
                   </span>
                 </p>
               </div>
