@@ -614,23 +614,43 @@ export default function Register() {
                     </div>
                   </div>
 
-                  <div className="flex items-start gap-3 mt-6">
-                    <input
-                      type="checkbox"
-                      id="coc"
-                      required
-                      checked={cocAccepted}
-                      onChange={(e) => setCocAccepted(e.target.checked)}
-                      className="mt-1 accent-primary h-4 w-4"
-                    />
-                    <label htmlFor="coc" className="text-sm text-on-surface-variant cursor-pointer select-none">
-                      I have read and agree to the{' '}
-                      <Link
-                        to="/code-of-conduct" className="text-primary underline hover:text-primary-container transition-colors">
-                        Code of Conduct
-                      </Link>
-                    </label>
-                  </div>
+              <div className="flex items-start gap-3 mt-6">
+
+  <input
+    type="checkbox"
+    id="coc"
+    required
+    checked={cocAccepted}
+    onChange={(e) => setCocAccepted(e.target.checked)}
+    className="mt-1 accent-primary h-4 w-4 shrink-0"
+  />
+<label
+  htmlFor="coc"
+  className="text-sm leading-relaxed text-on-surface-variant cursor-pointer select-none"
+>
+  I agree to the{' '}
+
+  <Link
+    to="/code-of-conduct"
+    className="text-primary underline hover:text-primary-container transition-colors"
+  >
+    Code of Conduct
+  </Link>
+
+  {' '}and acknowledge the{' '}
+
+  <Link
+    to="/code-of-conduct"
+    className="text-primary underline hover:text-primary-container transition-colors"
+  >
+    Data Usage & Participant Consent
+  </Link>
+
+  {' '}terms regarding registration information, event communications,
+  sponsor opportunities, and related hackathon activities.
+</label>
+
+</div>
 
                   <motion.button
                     whileHover={{ scale: cocAccepted && !loading ? 1.01 : 1 }}
@@ -655,9 +675,9 @@ export default function Register() {
                     </p>
                   )}
 
-                  <p className="text-center text-xs text-on-surface-variant">
+                  {/* <p className="text-center text-xs text-on-surface-variant">
                     By registering, you also agree to our Privacy Policy.
-                  </p>
+                  </p> */}
                 </div>
               </form>
             </motion.div>
