@@ -54,10 +54,10 @@ const rewards: Reward[] = [
     subtitle: 'to overall winner',
     description: 'The ultimate reward for the most outstanding and innovative project overall.',
     icon: Trophy,
-    accent: 'text-violet-400',
-    ring: 'border-violet-400/35',
-    bg: 'bg-violet-500/10',
-    glow: 'shadow-[0_0_40px_rgba(139,92,246,0.25)]',
+    accent: 'text-primary',
+    ring: 'border-primary/35',
+    bg: 'bg-primary/10',
+    glow: 'shadow-[0_0_40px_rgba(224,64,160,0.25)]',
   },
   {
     title: 'Track Winner',
@@ -66,10 +66,10 @@ const rewards: Reward[] = [
     subtitle: 'per track',
     description: 'Awarded to the top-performing team in each specialized track.',
     icon: Medal,
-    accent: 'text-cyan-300',
-    ring: 'border-cyan-400/35',
-    bg: 'bg-cyan-500/10',
-    glow: 'shadow-[0_0_30px_rgba(6,182,212,0.2)]',
+    accent: 'text-secondary',
+    ring: 'border-secondary/35',
+    bg: 'bg-secondary/10',
+    glow: 'shadow-[0_0_30px_rgba(34,211,238,0.2)]',
   },
   {
     title: 'Best Presenter',
@@ -78,10 +78,10 @@ const rewards: Reward[] = [
     subtitle: 'individual effort',
     description: 'Awarded to the most charismatic and effective communicator.',
     icon: Mic,
-    accent: 'text-emerald-400',
-    ring: 'border-emerald-400/35',
-    bg: 'bg-emerald-500/10',
-    glow: 'shadow-[0_0_30px_rgba(52,211,153,0.15)]',
+    accent: 'text-tertiary',
+    ring: 'border-tertiary/35',
+    bg: 'bg-tertiary/10',
+    glow: 'shadow-[0_0_30px_rgba(96,128,255,0.15)]',
   },
   {
     title: 'Swags & Freebies',
@@ -89,10 +89,10 @@ const rewards: Reward[] = [
     subtitle: 'all participants',
     description: 'Exclusive kits, goodies, and branded merchandise for everyone.',
     icon: ThumbsUp,
-    accent: 'text-fuchsia-300',
-    ring: 'border-fuchsia-400/35',
-    bg: 'bg-fuchsia-500/10',
-    glow: 'shadow-[0_0_30px_rgba(240,171,252,0.15)]',
+    accent: 'text-primary-container',
+    ring: 'border-primary-container/35',
+    bg: 'bg-primary-container/10',
+    glow: 'shadow-[0_0_30px_rgba(240,108,192,0.15)]',
   },
   {
     title: 'Gifts & Merch',
@@ -100,10 +100,10 @@ const rewards: Reward[] = [
     subtitle: 'bonus rewards',
     description: 'Special branded collectibles and surprise gifts during the event.',
     icon: Star,
-    accent: 'text-amber-300',
-    ring: 'border-amber-400/35',
-    bg: 'bg-amber-500/10',
-    glow: 'shadow-[0_0_30px_rgba(252,211,77,0.15)]',
+    accent: 'text-secondary-dim',
+    ring: 'border-secondary-dim/35',
+    bg: 'bg-secondary-dim/10',
+    glow: 'shadow-[0_0_30px_rgba(6,182,212,0.15)]',
   },
 ];
 
@@ -150,22 +150,22 @@ export default function Prizes() {
       className="py-28 px-6 md:px-8 max-w-7xl mx-auto relative overflow-hidden"
     >
       <div className="absolute inset-0 pointer-events-none">
-        <div className="absolute inset-0 rounded-[2.5rem] bg-linear-to-br from-[#030712] via-[#0b1731] to-[#180d2e]" />
+        <div className="absolute inset-0 rounded-[2.5rem] bg-linear-to-br from-[#020416] via-[#0a1230] to-[#1a0040]" />
         <div className="absolute inset-0 rounded-[2.5rem] opacity-30 noise-overlay" />
         <motion.div
           animate={{ scale: [1, 1.15, 1], opacity: [0.18, 0.28, 0.18] }}
           transition={{ duration: 8, repeat: Infinity, ease: 'easeInOut' }}
-          className="absolute -top-20 left-[15%] w-64 h-64 rounded-full bg-violet-400/20 blur-3xl"
+          className="absolute -top-20 left-[15%] w-64 h-64 rounded-full bg-primary/20 blur-3xl"
         />
         <motion.div
           animate={{ scale: [1, 1.2, 1], opacity: [0.15, 0.25, 0.15] }}
           transition={{ duration: 10, repeat: Infinity, ease: 'easeInOut', delay: 2 }}
-          className="absolute top-16 right-[10%] w-72 h-72 rounded-full bg-cyan-300/20 blur-3xl"
+          className="absolute top-16 right-[10%] w-72 h-72 rounded-full bg-secondary/20 blur-3xl"
         />
         <motion.div
           animate={{ scale: [1, 1.1, 1], opacity: [0.1, 0.2, 0.1] }}
           transition={{ duration: 7, repeat: Infinity, ease: 'easeInOut', delay: 1 }}
-          className="absolute bottom-10 left-[40%] w-56 h-56 rounded-full bg-fuchsia-400/15 blur-3xl"
+          className="absolute bottom-10 left-[40%] w-56 h-56 rounded-full bg-primary-dim/15 blur-3xl"
         />
       </div>
 
@@ -179,9 +179,9 @@ export default function Prizes() {
           className="text-center mb-12"
         >
           <h2 className="text-5xl md:text-7xl font-syne font-bold mb-4 text-white">
-            Prizes <span className="text-violet-400">& Rewards</span>
+            Prizes <span className="text-primary">& Rewards</span>
           </h2>
-          <p className="text-cyan-50 text-lg max-w-2xl mx-auto font-medium">
+          <p className="text-secondary/80 text-lg max-w-2xl mx-auto font-medium">
             Amazing prizes await the most innovative teams.
           </p>
         </motion.div>
@@ -197,7 +197,7 @@ export default function Prizes() {
             viewport={{ once: true, amount: 0.3 }}
             transition={{ duration: 0.55 }}
             whileHover="hover"
-            className={`relative rounded-3xl overflow-hidden border border-violet-400/35 ${grand.glow} bg-linear-to-br from-violet-600/30 via-[#0d1033] to-amber-500/20 flex flex-col justify-between min-h-95 md:min-h-120`}
+            className={`relative rounded-3xl overflow-hidden border border-primary/35 ${grand.glow} bg-linear-to-br from-primary/30 via-[#0a1230] to-secondary/20 flex flex-col justify-between min-h-95 md:min-h-120`}
           >
             <motion.div
               variants={shineVariants}
@@ -207,7 +207,7 @@ export default function Prizes() {
             <motion.div
               animate={{ scale: [1, 1.6, 1], opacity: [0.7, 0, 0.7] }}
               transition={{ duration: 2.5, repeat: Infinity }}
-              className="absolute top-4 right-4 w-3 h-3 rounded-full bg-violet-400"
+              className="absolute top-4 right-4 w-3 h-3 rounded-full bg-primary"
             />
 
             <div className="p-7 pb-0">
@@ -218,7 +218,7 @@ export default function Prizes() {
               >
                 <grand.icon size={30} />
               </motion.div>
-              <p className="text-xs uppercase tracking-[0.18em] text-violet-200 font-label font-bold mb-1">
+              <p className="text-xs uppercase tracking-[0.18em] text-primary-container font-label font-bold mb-1">
                 Overall Winner
               </p>
               <h3 className="font-syne text-3xl font-bold text-white mb-2">{grand.title}</h3>
@@ -229,7 +229,7 @@ export default function Prizes() {
               <p className="font-syne text-5xl md:text-6xl font-bold text-white leading-tight">
                 <CountUp target={grand.amount} prefix={grand.prefix} duration={2} />
               </p>
-              <p className="text-sm text-violet-100 mt-1 italic font-medium">{grand.subtitle}</p>
+              <p className="text-sm text-primary-container mt-1 italic font-medium">{grand.subtitle}</p>
             </div>
           </motion.article>
 
@@ -248,7 +248,7 @@ export default function Prizes() {
                   viewport={{ once: true, amount: 0.3 }}
                   transition={{ duration: 0.5, delay: 0.1 * i }}
                   whileHover="hover"
-                  className={`relative rounded-3xl overflow-hidden border ${reward.ring} ${reward.glow} bg-[#0b1228]/90 backdrop-blur-xl p-6 flex flex-col`}
+                  className={`relative rounded-3xl overflow-hidden border ${reward.ring} ${reward.glow} bg-[#0a1230]/90 backdrop-blur-xl p-6 flex flex-col`}
                 >
                   <motion.div variants={shineVariants} className="absolute inset-0 w-1/2 bg-linear-to-r from-transparent via-white/8 to-transparent skew-x-[-20deg] pointer-events-none z-10" />
                   
@@ -284,7 +284,7 @@ export default function Prizes() {
                   viewport={{ once: true, amount: 0.3 }}
                   transition={{ duration: 0.4, delay: 0.2 + i * 0.1 }}
                   whileHover="hover"
-                  className={`relative rounded-3xl overflow-hidden border ${reward.ring} ${reward.glow} bg-[#0b1228]/80 backdrop-blur-xl p-5`}
+                  className={`relative rounded-3xl overflow-hidden border ${reward.ring} ${reward.glow} bg-[#0a1230]/80 backdrop-blur-xl p-5`}
                 >
                   <motion.div variants={shineVariants} className="absolute inset-0 w-1/2 bg-linear-to-r from-transparent via-white/8 to-transparent skew-x-[-20deg] pointer-events-none z-10" />
 

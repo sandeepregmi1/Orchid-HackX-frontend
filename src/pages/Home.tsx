@@ -67,7 +67,7 @@ export default function Home() {
             </p>
             <button
               onClick={() => navigate('/register')}
-              className="relative z-10 bg-linear-to-r from-primary to-primary-container text-on-primary-container font-syne font-semibold px-12 py-5 rounded-full text-xl hover:shadow-[0_0_50px_rgba(199,125,255,0.5)] transition-all duration-300"
+              className="relative z-10 bg-linear-to-r from-primary to-primary-container text-on-primary-container font-syne font-semibold px-12 py-5 rounded-full text-xl hover:shadow-[0_0_50px_rgba(224,64,160,0.5)] transition-all duration-300"
             >
               Register Now
             </button>

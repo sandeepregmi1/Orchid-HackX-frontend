@@ -55,7 +55,7 @@ function InputField({ placeholder, type = 'text', required = false, name, value,
       maxLength={maxLength}
       pattern={pattern}
       title={title}
-      className="w-full bg-black/80 border border-outline-variant/40 rounded-lg px-4 py-3.5 text-sm text-on-surface placeholder:text-on-surface-variant/70 focus:outline-none focus:border-primary transition-colors"
+      className="w-full bg-[#060a1e]/80 border border-outline-variant/40 rounded-lg px-4 py-3.5 text-sm text-on-surface placeholder:text-on-surface-variant/70 focus:outline-none focus:border-primary transition-colors"
     />
   );
 }
@@ -302,7 +302,7 @@ export default function Register() {
               </p>
               <button
                 onClick={handleBackHome}
-                className="rounded-xl bg-primary text-on-primary px-8 py-3.5 font-syne font-semibold shadow-[0_0_20px_rgba(162,84,255,0.4)] hover:shadow-[0_0_30px_rgba(162,84,255,0.6)] transition-all"
+                className="rounded-xl bg-primary text-on-primary px-8 py-3.5 font-syne font-semibold shadow-[0_0_20px_rgba(224,64,160,0.4)] hover:shadow-[0_0_30px_rgba(224,64,160,0.6)] transition-all"
               >
                 Return to Command Center
               </button>
@@ -312,7 +312,7 @@ export default function Register() {
               initial={{ opacity: 0, y: 18 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.1 }}
-              className="glass-card rounded-[2rem] border border-primary/30 p-6 md:p-10 shadow-[0_0_55px_rgba(162,84,255,0.18)]"
+              className="glass-card rounded-[2rem] border border-primary/30 p-6 md:p-10 shadow-[0_0_55px_rgba(224,64,160,0.18)]"
             >
               <form onSubmit={handleSubmit} className="space-y-8">
                 <div className="grid lg:grid-cols-2 gap-8 md:gap-10">
@@ -414,7 +414,7 @@ export default function Register() {
                         name="role"
                         value={formData.role}
                         onChange={handleChange}
-                        className="w-full bg-black/80 border border-outline-variant/40 rounded-lg px-4 py-3.5 text-sm text-on-surface focus:outline-none focus:border-primary transition-colors"
+                        className="w-full bg-[#060a1e]/80 border border-outline-variant/40 rounded-lg px-4 py-3.5 text-sm text-on-surface focus:outline-none focus:border-primary transition-colors"
                       >
                         <option>Developer</option>
                         <option>Designer</option>
@@ -527,7 +527,7 @@ export default function Register() {
                       value={formData.experience}
                       onChange={handleChange}
                       placeholder="List your previous hackathons or projects..."
-                      className="w-full bg-black/80 border border-outline-variant/40 rounded-lg px-4 py-3.5 text-sm text-on-surface placeholder:text-on-surface-variant/70 focus:outline-none focus:border-primary transition-colors resize-none"
+                      className="w-full bg-[#060a1e]/80 border border-outline-variant/40 rounded-lg px-4 py-3.5 text-sm text-on-surface placeholder:text-on-surface-variant/70 focus:outline-none focus:border-primary transition-colors resize-none"
                     />
                   </div>
 
@@ -550,7 +550,7 @@ export default function Register() {
                       {teamMembers.map((member, index) => (
                         <div
                           key={`member-${index}`}
-                          className="flex flex-col gap-3 p-4 border border-outline-variant/20 rounded-xl bg-black/40 relative"
+                          className="flex flex-col gap-3 p-4 border border-outline-variant/20 rounded-xl bg-[#060a1e]/40 relative"
                         >
                           <div className="flex justify-between items-center">
                             <span className="text-sm font-semibold text-on-surface">Team Member {index + 2}</span>
@@ -570,7 +570,7 @@ export default function Register() {
                               value={member.name}
                               onChange={(e) => updateTeamMember(index, 'name', e.target.value)}
                               placeholder={`Name *`}
-                              className="w-full bg-black/80 border border-outline-variant/40 rounded-lg px-4 py-3 text-sm text-on-surface placeholder:text-on-surface-variant/70 focus:outline-none focus:border-primary transition-colors"
+                              className="w-full bg-[#060a1e]/80 border border-outline-variant/40 rounded-lg px-4 py-3 text-sm text-on-surface placeholder:text-on-surface-variant/70 focus:outline-none focus:border-primary transition-colors"
                             />
                             <input
                               type="email"
@@ -578,7 +578,7 @@ export default function Register() {
                               value={member.email}
                               onChange={(e) => updateTeamMember(index, 'email', e.target.value)}
                               placeholder="Email Address *"
-                              className="w-full bg-black/80 border border-outline-variant/40 rounded-lg px-4 py-3 text-sm text-on-surface placeholder:text-on-surface-variant/70 focus:outline-none focus:border-primary transition-colors"
+                              className="w-full bg-[#060a1e]/80 border border-outline-variant/40 rounded-lg px-4 py-3 text-sm text-on-surface placeholder:text-on-surface-variant/70 focus:outline-none focus:border-primary transition-colors"
                             />
                             <input
                               type="number"
@@ -588,7 +588,7 @@ export default function Register() {
                               value={member.age}
                               onChange={(e) => updateTeamMember(index, 'age', e.target.value)}
                               placeholder="Age *"
-                              className="w-full bg-black/80 border border-outline-variant/40 rounded-lg px-4 py-3 text-sm text-on-surface placeholder:text-on-surface-variant/70 focus:outline-none focus:border-primary transition-colors"
+                              className="w-full bg-[#060a1e]/80 border border-outline-variant/40 rounded-lg px-4 py-3 text-sm text-on-surface placeholder:text-on-surface-variant/70 focus:outline-none focus:border-primary transition-colors"
                             />
                             <input
                               type="text"
@@ -599,14 +599,14 @@ export default function Register() {
                               value={member.phoneNumber}
                               onChange={(e) => updateTeamMember(index, 'phoneNumber', e.target.value)}
                               placeholder="Phone Number *"
-                              className="w-full bg-black/80 border border-outline-variant/40 rounded-lg px-4 py-3 text-sm text-on-surface placeholder:text-on-surface-variant/70 focus:outline-none focus:border-primary transition-colors"
+                              className="w-full bg-[#060a1e]/80 border border-outline-variant/40 rounded-lg px-4 py-3 text-sm text-on-surface placeholder:text-on-surface-variant/70 focus:outline-none focus:border-primary transition-colors"
                             />
                             <input
                               type="text"
                               value={member.github}
                               onChange={(e) => updateTeamMember(index, 'github', e.target.value)}
                               placeholder="github.com/username (Optional)"
-                              className="w-full md:col-span-2 bg-black/80 border border-outline-variant/40 rounded-lg px-4 py-3 text-sm text-on-surface placeholder:text-on-surface-variant/70 focus:outline-none focus:border-primary transition-colors"
+                              className="w-full md:col-span-2 bg-[#060a1e]/80 border border-outline-variant/40 rounded-lg px-4 py-3 text-sm text-on-surface placeholder:text-on-surface-variant/70 focus:outline-none focus:border-primary transition-colors"
                             />
                           </div>
                         </div>
@@ -657,7 +657,7 @@ export default function Register() {
                     whileTap={{ scale: cocAccepted && !loading ? 0.99 : 1 }}
                     type="submit"
                     disabled={!cocAccepted || loading}
-                    className="w-full rounded-xl bg-linear-to-r from-primary to-primary-container text-on-primary-container font-syne font-semibold py-4 shadow-[0_0_25px_rgba(201,129,255,0.45)] disabled:opacity-50 disabled:cursor-not-allowed disabled:shadow-none relative overflow-hidden"
+                    className="w-full rounded-xl bg-linear-to-r from-primary to-primary-container text-on-primary-container font-syne font-semibold py-4 shadow-[0_0_25px_rgba(224,64,160,0.45)] disabled:opacity-50 disabled:cursor-not-allowed disabled:shadow-none relative overflow-hidden"
                   >
                     <span className={loading ? 'opacity-0' : 'opacity-100'}>
                       Finalize Registration

@@ -12,7 +12,7 @@ export default function Hero() {
       >
         <source src={bgVideo} type="video/mp4" />
       </video>
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(6,4,15,0.25),rgba(6,4,15,0.86)_72%,rgba(6,4,15,0.95))]" />
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(6,10,30,0.25),rgba(6,10,30,0.86)_72%,rgba(6,10,30,0.95))]" />
 
       {/* Top Gradient Overlay for Smooth Transition */}
       <div className="absolute inset-x-0 top-0 h-32 bg-linear-to-b from-background via-background/60 to-transparent pointer-events-none z-[1]" />
@@ -58,7 +58,7 @@ export default function Hero() {
         className="text-5xl md:text-7xl lg:text-8xl font-syne font-bold tracking-tighter leading-[0.85] mb-4 relative z-10"
       >
         <span>
-          <span className="text-amber-50"> Orchid </span>
+          <span className="text-white"> Orchid </span>
           <span
             className="glitch-text bg-linear-to-r from-primary-dim via-secondary to-primary-dim bg-clip-text text-transparent"
             data-text="HackX"

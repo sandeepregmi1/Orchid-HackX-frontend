@@ -6,36 +6,36 @@
   --font-dm: "DM Sans", sans-serif;
   --font-label: "Space Grotesk", sans-serif;
 
-  --color-background: #06040f;
-  --color-surface: #0f0c19;
-  --color-surface-dim: #0f0c19;
-  --color-surface-bright: #2e293e;
-  --color-surface-container-lowest: #000000;
-  --color-surface-container-low: #151120;
-  --color-surface-container: #1b1727;
-  --color-surface-container-high: #211d2e;
-  --color-surface-container-highest: #282336;
+  --color-background: #060a1e;
+  --color-surface: #0a0e27;
+  --color-surface-dim: #0a0e27;
+  --color-surface-bright: #1e2444;
+  --color-surface-container-lowest: #020416;
+  --color-surface-container-low: #0d1130;
+  --color-surface-container: #111638;
+  --color-surface-container-high: #161b42;
+  --color-surface-container-highest: #1c224d;
 
-  --color-primary: #d294ff;
-  --color-primary-dim: #c77dff;
-  --color-primary-container: #c981ff;
-  --color-on-primary: #4a0077;
-  --color-on-primary-container: #39005d;
+  --color-primary: #e040a0;
+  --color-primary-dim: #d63ef0;
+  --color-primary-container: #f06cc0;
+  --color-on-primary: #1a0011;
+  --color-on-primary-container: #2d0020;
 
-  --color-secondary: #ff6b9d;
-  --color-secondary-dim: #ff6b9d;
-  --color-secondary-container: #8c0a46;
-  --color-on-secondary: #47001f;
+  --color-secondary: #22d3ee;
+  --color-secondary-dim: #06b6d4;
+  --color-secondary-container: #0891b2;
+  --color-on-secondary: #001a20;
 
-  --color-tertiary: #b6ffed;
-  --color-tertiary-dim: #00e8c9;
-  --color-tertiary-container: #26fedc;
-  --color-on-tertiary: #006657;
+  --color-tertiary: #6080ff;
+  --color-tertiary-dim: #4060e0;
+  --color-tertiary-container: #3050c0;
+  --color-on-tertiary: #000833;
 
   --color-on-surface: #ffffff;
-  --color-on-surface-variant: #d8d2e1;
-  --color-outline: #9c97a8;
-  --color-outline-variant: #5c5867;
+  --color-on-surface-variant: #a8b0cc;
+  --color-outline: #606888;
+  --color-outline-variant: #353d5c;
 }
 
 @layer base {
@@ -57,21 +57,21 @@
   }
 
   .glass-card {
-    background: rgba(19, 15, 40, 0.6);
+    background: rgba(10, 14, 39, 0.6);
     backdrop-filter: blur(32px);
-    border-top: 1px solid rgba(199, 125, 255, 0.3);
-    border-left: 1px solid rgba(199, 125, 255, 0.1);
+    border-top: 1px solid rgba(224, 64, 160, 0.25);
+    border-left: 1px solid rgba(224, 64, 160, 0.08);
   }
 
   .logo-3d-glow {
-    filter: drop-shadow(0 0 15px rgba(210, 148, 255, 0.4)) drop-shadow(0 0 30px rgba(255, 107, 157, 0.2));
+    filter: drop-shadow(0 0 15px rgba(224, 64, 160, 0.4)) drop-shadow(0 0 30px rgba(34, 211, 238, 0.2));
     transform: perspective(1000px) rotateX(10deg) rotateY(-5deg);
     transition: all 0.5s ease;
   }
 
   .logo-3d-glow:hover {
     transform: perspective(1000px) rotateX(0deg) rotateY(0deg) scale(1.05);
-    filter: drop-shadow(0 0 25px rgba(210, 148, 255, 0.6)) drop-shadow(0 0 50px rgba(255, 107, 157, 0.4));
+    filter: drop-shadow(0 0 25px rgba(224, 64, 160, 0.6)) drop-shadow(0 0 50px rgba(34, 211, 238, 0.4));
   }
 
   .glitch-text {
@@ -111,12 +111,12 @@
     position: relative;
     overflow: hidden;
     border-radius: 1.75rem;
-    background: rgba(15, 12, 25, 0.45);
+    background: rgba(10, 14, 39, 0.45);
     border: 1px solid rgba(255, 255, 255, 0.08);
     box-shadow:
-      0 0 0 1px rgba(199, 125, 255, 0.12) inset,
+      0 0 0 1px rgba(224, 64, 160, 0.12) inset,
       0 28px 70px rgba(0, 0, 0, 0.38),
-      0 0 28px rgba(199, 125, 255, 0.18);
+      0 0 28px rgba(224, 64, 160, 0.18);
     backdrop-filter: blur(14px);
     transform: translateZ(0);
     animation: hero-float 6s ease-in-out infinite;
@@ -159,10 +159,10 @@
 }
  @keyframes pulse-glow {
           0%, 100% {
-            box-shadow: 0 0 20px rgba(210, 148, 255, 0.3);
+            box-shadow: 0 0 20px rgba(224, 64, 160, 0.3);
           }
           50% {
-            box-shadow: 0 0 40px rgba(210, 148, 255, 0.6);
+            box-shadow: 0 0 40px rgba(224, 64, 160, 0.6);
           }
         }
 

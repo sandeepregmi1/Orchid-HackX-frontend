@@ -33,7 +33,7 @@ export default function CodeOfConduct() {
 
             <div className="inline-flex items-center gap-3 px-6 py-4 rounded-full bg-surface-container border border-outline-variant/40 shadow-sm mb-6">
               {/* <Shield size={90} className="text-red-700" /> */}
-              <span className="text-3xl sm:text-5xl font-bold tracking-wide text-red-700">
+              <span className="text-3xl sm:text-5xl font-bold tracking-wide text-primary">
                 Code of Conduct, Data Usage & Participant Consent
               </span>
             </div>

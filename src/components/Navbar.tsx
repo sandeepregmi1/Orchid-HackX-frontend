@@ -46,7 +46,7 @@ export default function Navbar({ onRegisterClick, onHomeClick }: NavbarProps) {
   ];
 
   return (
-    <nav className="fixed top-0 w-full z-50 bg-[#130f28]/60 backdrop-blur-xl shadow-[0_0_40px_rgba(199,125,255,0.1)]">
+    <nav className="fixed top-0 w-full z-50 bg-[#0a0e27]/60 backdrop-blur-xl shadow-[0_0_40px_rgba(224,64,160,0.1)]">
       <div className="flex justify-between items-center px-8 py-4 max-w-7xl mx-auto">
         <div className="flex items-center gap-3 cursor-pointer" onClick={onHomeClick}>
           <img
@@ -96,7 +96,7 @@ export default function Navbar({ onRegisterClick, onHomeClick }: NavbarProps) {
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
             onClick={onRegisterClick}
-            className="bg-gradient-to-r from-primary to-primary-container text-on-primary-container font-syne font-semibold px-6 py-2.5 rounded-full hover:shadow-[0_0_20px_rgba(199,125,255,0.4)] transition-all duration-300"
+            className="bg-gradient-to-r from-primary to-primary-container text-on-primary-container font-syne font-semibold px-6 py-2.5 rounded-full hover:shadow-[0_0_20px_rgba(224,64,160,0.4)] transition-all duration-300"
           >
             Register Now
           </motion.button>

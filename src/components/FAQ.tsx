@@ -100,7 +100,7 @@ export default function FAQ() {
               transition={{ delay: idx * 0.045, duration: 0.4 }}
               className="glass-card rounded-2xl overflow-hidden"
               style={{
-                border: isOpen ? '2px solid #2e0037' : '1.5px solid transparent',
+                border: isOpen ? '2px solid #1a0040' : '1.5px solid transparent',
                 transition: 'border-color 0.3s ease',
               }}
             >
@@ -128,8 +128,8 @@ export default function FAQ() {
                   transition={{ duration: 0.25, ease: 'easeInOut' }}
                   className="ml-4 shrink-0 w-8 h-8 rounded-full flex items-center justify-center text-primary"
                   style={{
-                    background: isOpen ? 'rgba(46,0,55,0.12)' : 'transparent',
-                    border: isOpen ? '1px solid #2e0037' : '1px solid transparent',
+                    background: isOpen ? 'rgba(26,0,64,0.12)' : 'transparent',
+                    border: isOpen ? '1px solid #1a0040' : '1px solid transparent',
                     transition: 'background 0.3s, border-color 0.3s',
                   }}
                 >
@@ -151,7 +151,7 @@ export default function FAQ() {
                     {/* Subtle divider */}
                     <div
                       className="mx-8 h-px"
-                      style={{ background: 'rgba(46,0,55,0.18)' }}
+                      style={{ background: 'rgba(26,0,64,0.18)' }}
                     />
                     <div className="px-8 pt-4 pb-6 text-on-surface-variant leading-relaxed pl-20">
                       {faq.a}

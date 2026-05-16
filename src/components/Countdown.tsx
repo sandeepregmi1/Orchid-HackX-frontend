@@ -48,7 +48,7 @@ export default function Countdown() {
             className="w-16 h-16 md:w-24 md:h-24 rounded-xl bg-surface-container border border-outline-variant/30 flex items-center justify-center text-2xl md:text-4xl font-bold text-on-surface"
             style={{
               animation: 'pulse-glow 3s infinite',
-              boxShadow: '0 0 20px rgba(210, 148, 255, 0.3)',
+              boxShadow: '0 0 20px rgba(224, 64, 160, 0.3)',
             }}
           >
             {String(unit.value).padStart(2, '0')}
