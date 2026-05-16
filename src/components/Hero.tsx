@@ -57,15 +57,22 @@ export default function Hero() {
         transition={{ duration: 0.8, delay: 0.4 }}
         className="text-5xl md:text-7xl lg:text-8xl font-syne font-bold tracking-tighter leading-[0.85] mb-4 relative z-10"
       >
-        <span>
-          <span className="text-white"> Orchid </span>
-          <span
-            className="glitch-text bg-linear-to-r from-primary-dim via-secondary to-primary-dim bg-clip-text text-transparent"
-            data-text="HackX"
-          >
-            HackX
-          </span>
-        </span>
+<span>
+  <span className="text-white text-8xl">
+    ORCHID{" "}
+  </span>
+<span
+  className="glitch-text bg-gradient-to-b from-white via-[#e040a0] to-[#d63ef0] bg-clip-text text-transparent"
+  data-text="HACKX"
+>
+  <span className="text-8xl">HACK</span>
+  <span
+    className="bg-gradient-to-b from-white via-[#e040a0] to-[#d63ef0] bg-clip-text text-transparent font-extrabold text-9xl leading-none ml-1 -mt-1 inline-block"
+  >
+    X
+  </span>
+</span>
+</span>
       </motion.h1>
 
       <motion.p
