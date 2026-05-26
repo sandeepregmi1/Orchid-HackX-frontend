@@ -15,8 +15,11 @@ export default function FAQ() {
     },
     {
       q: 'When and where is the event happening?',
-      a: 'The hackathon will be held offline at Orchid College, Kathmandu, from 19th – 21st June 2026, giving you 48 hours of pure creation.',
+      a: 'The hackathon will be held offline at Orchid College, Kathmandu, from  10th – 12th July 2026, giving you 48 hours of pure creation.',
     },
+
+   
+
     {
       q: 'Is there any registration fee?',
       a: 'No, participation is completely free. We provide food, swag, and a full hackathon experience for all selected participants.',
