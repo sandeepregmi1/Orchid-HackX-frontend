@@ -56,7 +56,7 @@ const teamData: Group[] = [
       {
         name: 'Sandeep Regmi', role: 'Technical Lead', image: sandeepImg, github: 'https://github.com/sandeepregmi1', linkedin: 'https://www.linkedin.com/in/sandeep-regmi-b77a54212',
       },
-      { name: 'Nabin Purbey', role: 'Technical Lead', image: nabinImg, github: 'https://github.com/nabinpurbey03', linkedin: 'https://www.linkedin.com/in/nabin-purbey-devops/' },
+      // { name: 'Nabin Purbey', role: 'Technical Lead', image: nabinImg, github: 'https://github.com/nabinpurbey03', linkedin: 'https://www.linkedin.com/in/nabin-purbey-devops/' },
     ],
   },
   {
