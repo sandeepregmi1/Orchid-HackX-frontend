@@ -107,6 +107,77 @@ const rewards: Reward[] = [
   },
 ];
 
+// const additionalBenefits = [
+//   {
+//     title: 'Community Engagement',
+//     subtitle: 'Networking & Collaboration',
+//     description:
+//       'Participants will have opportunities to connect and engage with representatives and members from Developer Association Jhapa and Dev Community Nepal, fostering collaboration and long-term community involvement.',
+//     icon: Gift,
+//     accent: 'text-secondary',
+//     ring: 'border-secondary/35',
+//     bg: 'bg-secondary/10',
+//   },
+
+//   {
+//     title: 'Exclusive Gift Vouchers',
+//     subtitle: 'Participant Benefits',
+//     description:
+//       'Selected vouchers and special offers will be distributed to participants during the event.',
+//     icon: Gift,
+//     accent: 'text-primary',
+//     ring: 'border-primary/35',
+//     bg: 'bg-primary/10',
+//   },
+
+//   {
+//     title: 'Domain & Hosting Package',
+//     subtitle: 'Top 3 Winning Teams',
+//     description:
+//       'Each of the top three winning teams will receive a one-year .com domain and shared hosting package valued at more than NPR 40,000 in total, with benefits worth over NPR 10,000 per team.',
+//     icon: Trophy,
+//     accent: 'text-tertiary',
+//     ring: 'border-tertiary/35',
+//     bg: 'bg-tertiary/10',
+//   },
+
+//   {
+//     title: '20% Service Discount',
+//     subtitle: 'For All Participants',
+//     description:
+//       'All participants will receive a 20% discount on service purchases from Kailash Cloud using the official OrchidHackX promotional code.',
+//     icon: Medal,
+//     accent: 'text-primary-container',
+//     ring: 'border-primary-container/35',
+//     bg: 'bg-primary-container/10',
+//   },
+
+//   {
+//     title: 'Expert Mentorship',
+//     subtitle: 'Guidance Throughout the Event',
+//     description:
+//       'Participants will receive mentorship and support from experienced hackathon experts and industry professionals throughout the event.',
+//     icon: Mic,
+//     accent: 'text-secondary-dim',
+//     ring: 'border-secondary-dim/35',
+//     bg: 'bg-secondary-dim/10',
+//   },
+
+//   {
+//     title: 'Paid Internship Opportunity',
+//     subtitle: 'Recognizing Technical Excellence',
+//     description:
+//       'Participants demonstrating exceptional coding practices, maintainable architecture, and strong programming standards may be considered for a three-month paid internship opportunity at Nirvix Technology.',
+//     icon: Star,
+//     accent: 'text-primary',
+//     ring: 'border-primary/35',
+//     bg: 'bg-primary/10',
+//   },
+// ];
+
+
+
+
 const floatVariants: any = {
   animate: (i: number) => ({
     y: [0, -8, 0],
@@ -308,6 +379,69 @@ export default function Prizes() {
             </div>
           </div>
         </motion.div>
+
+
+{/* Additional Benefits Section */}
+{/* 
+<motion.div
+  initial={{ opacity: 0, y: 20 }}
+  whileInView={{ opacity: 1, y: 0 }}
+  viewport={{ once: true }}
+  transition={{ duration: 0.5 }}
+  className="mt-16"
+>
+  <div className="text-center mb-8">
+    <h3 className="font-syne text-3xl md:text-4xl font-bold text-white mb-2">
+      Additional <span className="text-primary">Benefits & Opportunities</span>
+    </h3>
+
+<p className="text-on-surface-variant text-base md:text-lg max-w-3xl mx-auto leading-relaxed">      Beyond prizes, participants gain access to valuable opportunities,
+      mentorship, rewards, and community engagement.
+    </p>
+  </div>
+
+  <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
+    {additionalBenefits.map((item, i) => (
+      <motion.article
+        key={item.title}
+        custom={i}
+        variants={floatVariants}
+        animate="animate"
+        whileHover="hover"
+        initial={{ opacity: 0, y: 24 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.4, delay: i * 0.05 }}
+        className={`relative rounded-3xl overflow-hidden border ${item.ring}
+        bg-[#0a1230]/80 backdrop-blur-xl p-6`}
+      >
+        <motion.div
+          variants={shineVariants}
+          className="absolute inset-0 w-1/2 bg-linear-to-r from-transparent via-white/8 to-transparent skew-x-[-20deg]"
+        />
+
+        <div
+          className={`w-12 h-12 rounded-xl border ${item.ring}
+          ${item.bg} flex items-center justify-center ${item.accent} mb-4`}
+        >
+          <item.icon size={22} />
+        </div>
+
+        <p className="text-xs uppercase tracking-[0.15em] text-on-surface-variant/80 mb-2 font-bold">
+          {item.subtitle}
+        </p>
+
+        <h4 className={`font-syne text-lg font-bold mb-3 ${item.accent}`}>
+          {item.title}
+        </h4>
+
+<p className="text-base md:text-[15px] text-on-surface-variant leading-7 font-medium">          {item.description}
+        </p>
+      </motion.article>
+    ))}
+  </div>
+</motion.div> */}
+
       </div>
     </section>
   );
