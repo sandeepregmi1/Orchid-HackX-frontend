@@ -311,6 +311,58 @@ export default function Prizes() {
           </div>
         </motion.div>
 
+        <motion.article
+          initial={{ opacity: 0, y: 24 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.2 }}
+          transition={{ duration: 0.5 }}
+          className="mt-8 rounded-3xl border border-primary/20 bg-[#0a1230]/80 backdrop-blur-xl p-6 md:p-8 overflow-hidden relative"
+        >
+          <div className="absolute inset-0 opacity-20 bg-linear-to-r from-primary/10 via-transparent to-secondary/10" />
+
+          <div className="relative z-10">
+            <div className="flex items-center gap-3 mb-5">
+              <div className="w-12 h-12 rounded-xl border border-primary/30 bg-primary/10 flex items-center justify-center text-primary">
+                <Gift size={22} />
+              </div>
+
+              <div>
+                <h3 className="font-syne text-2xl font-bold text-white">
+                  Additional Benefits & Opportunities
+                </h3>
+
+                <p className="text-sm text-on-surface-variant">
+                  Beyond prizes — mentorship, rewards and community engagement.
+                </p>
+              </div>
+            </div>
+
+            <div className="grid md:grid-cols-2 gap-3">
+              {[
+  'Community engagement opportunities with Developer Association Jhapa & Dev Community Nepal',
+  
+  'Exclusive gift vouchers and special offers available during the event',
+
+  'Top 3 winning teams receive a 1-year .com domain + shared hosting package (total value NPR 40,000+, benefits worth NPR 10,000+ per team)',
+
+  'All participants receive 20% OFF on Kailash Cloud services using the official OrchidHackX promo code',
+
+  'Guidance and mentorship throughout the hackathon from experienced mentors and hackathon experts',
+
+  'Participants demonstrating exceptional coding standards, architecture, and programming excellence may be considered for a 3-month paid internship opportunity at Nirvix Technology',
+].map((item) => (
+                <div
+                  key={item}
+                  className="rounded-xl border border-white/5 bg-white/[0.02] px-4 py-3 text-sm text-on-surface-variant"
+                >
+                  ✦ {item}
+                </div>
+              ))}
+            </div>
+          </div>
+        </motion.article>
+
+     
 
       </div>
     </section>
