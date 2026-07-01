@@ -62,7 +62,7 @@ export default function Home() {
             <h2 className="text-5xl md:text-7xl font-syne font-bold mb-8 relative z-10">
               Ready to <span className="text-primary">Build?</span>
             </h2>
-            <p className="text-on-surface-variant text-xl mb-12 max-w-2xl mx-auto relative z-10">
+            {/* <p className="text-on-surface-variant text-xl mb-12 max-w-2xl mx-auto relative z-10">
               Don't miss out on the biggest hackathon of the year. Limited spots available.
             </p>
             <button
@@ -70,7 +70,7 @@ export default function Home() {
               className="relative z-10 bg-linear-to-r from-primary to-primary-container text-on-primary-container font-syne font-semibold px-12 py-5 rounded-full text-xl hover:shadow-[0_0_50px_rgba(224,64,160,0.5)] transition-all duration-300"
             >
               Register Now
-            </button>
+            </button> */}
           </div>
         </motion.section>
       </main>

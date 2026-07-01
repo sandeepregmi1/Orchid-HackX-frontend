@@ -92,14 +92,14 @@ export default function Navbar({ onRegisterClick, onHomeClick }: NavbarProps) {
             Join Discord
           </motion.a>
 
-          <motion.button
+          {/* <motion.button
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
             onClick={onRegisterClick}
             className="bg-gradient-to-r from-primary to-primary-container text-on-primary-container font-syne font-semibold px-6 py-2.5 rounded-full hover:shadow-[0_0_20px_rgba(224,64,160,0.4)] transition-all duration-300"
           >
             Register Now
-          </motion.button>
+          </motion.button> */}
 
           {/* Mobile Menu Toggle */}
           <button
