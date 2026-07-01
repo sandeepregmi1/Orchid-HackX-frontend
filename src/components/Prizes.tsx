@@ -355,7 +355,7 @@ export default function Prizes() {
                   key={item}
                   className="rounded-xl border border-white/5 bg-white/[0.02] px-4 py-3 text-sm text-on-surface-variant"
                 >
-                  ✦ {item}
+                  ⦿ {item}
                 </div>
               ))}
             </div>
