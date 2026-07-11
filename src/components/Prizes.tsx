@@ -61,7 +61,7 @@ const rewards: Reward[] = [
   },
   {
     title: 'Track Winner',
-    amount: '10,000',
+    amount: '15,000',
     prefix: 'Rs. ',
     subtitle: 'per track',
     description: 'Awarded to the top-performing team in each specialized track.',
